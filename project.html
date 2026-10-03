@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fef9f0;color:#1d1c16;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#fbddc8", "tertiary-fixed-dim": "#c8c6c5", "on-secondary": "#ffffff", "error": "#ba1a1a", "on-error-container": "#93000a", "tertiary-container": "#494949", "on-secondary-fixed-variant": "#5a4317", "on-tertiary-fixed": "#1b1c1c", "primary-container": "#594536", "on-tertiary": "#ffffff", "surface-container-high": "#ece8df", "surface-dim": "#ded9d1", "background": "#fef9f0", "error-container": "#ffdad6", "on-tertiary-container": "#bab8b8", "secondary-container": "#fedba1", "outline-variant": "#d2c4bb", "primary-fixed-dim": "#dec1ad", "on-surface-variant": "#4e453f", "surface": "#fef9f0", "inverse-primary": "#dec1ad", "on-primary-container": "#cfb3a0", "on-error": "#ffffff", "surface-container-highest": "#e7e2d9", "secondary-fixed-dim": "#e3c28a", "outline": "#80756e", "primary": "#412f21", "on-primary-fixed": "#27180c", "secondary-fixed": "#ffdea8", "tertiary-fixed": "#e4e2e1", "on-background": "#1d1c16", "inverse-surface": "#32302b", "secondary": "#735a2c", "surface-container-low": "#f8f3ea", "on-tertiary-fixed-variant": "#474746", "on-secondary-container": "#785f30", "inverse-on-surface": "#f5f0e7", "on-primary-fixed-variant": "#574334", "tertiary": "#333232", "surface-variant": "#e7e2d9", "surface-bright": "#fef9f0", "surface-container": "#f2ede4", "surface-tint": "#705a4a", "on-secondary-fixed": "#271900", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "on-surface": "#1d1c16" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.75rem", "margin-desktop": "5rem", "gutter-desktop": "2.5rem", "space-sm": "0.5rem", "margin": "2rem", "space-xs": "0.25rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "margin-mobile": "1.25rem", "space-xl": "3rem" }, "fontFamily": { "display-hero-mobile": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Playfair Display" ], "button-text": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-sm": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "display-hero": [ "Playfair Display" ], "label-caps": [ "Plus Jakarta Sans" ], "subheading": [ "Playfair Display" ], "headline-lg-mobile": [ "Playfair Display" ] }, "fontSize": { "display-hero-mobile": [ "2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-md": [ "1rem", { "lineHeight": "1.625rem", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-sm": [ "0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "0.015em", "fontWeight": "400" } ], "headline-md": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "button-text": [ "0.875rem", { "lineHeight": "1rem", "letterSpacing": "0.08em", "fontWeight": "500" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.875rem", "letterSpacing": "0.01em", "fontWeight": "300" } ], "headline-sm": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "0em", "fontWeight": "500" } ], "headline-lg": [ "3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "display-hero": [ "4.5rem", { "lineHeight": "5rem", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "label-caps": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.15em", "fontWeight": "600" } ], "subheading": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0.02em", "fontWeight": "400" } ], "headline-lg-mobile": [ "2rem", { "lineHeight": "2.5rem", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen relative"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-4 md:px-8 flex items-center justify-between max-w-7xl mx-auto w-full"><div class="flex items-center gap-3"><img alt="IRA Interior Studio Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WeHykTn7Gx1sYGz3Bn0yojOR3tm8xFNgksnQWmoo8_h_ZKhHFVk7hwZBiUwcIRwL5FyBeE0mbIci5sD-7_PcWWUVjjGUqMX7ht9y-iLEEdLKyQmjI6-eqXB5Lj7Ec5-ARlBtwPGC8Yl8wgB5bTMp-8mpoJliGOfHFR8g1fcUhD_i_EgdqPtCDjBc4kLoS21cvtI_CQdISOvxB96cA3wyUqTPFKkm34U4P6qRYx8BzEQm_Qv-ESJrKspRg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">IRA</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest hidden sm:inline">Interior Studio</span></div></div><div class="hidden md:flex items-center gap-6"><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="index.html">Home</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="about.html">About</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="service.html">Services</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="projects" href="project.html">Projects</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="contact.html">Contact</a></div><div class="flex items-center gap-3"><span class="font-subheading text-subheading text-primary font-medium hidden lg:inline">Projects</span><a class="hidden sm:inline-flex items-center justify-center h-10 px-4 bg-primary text-on-primary font-button-text text-button-text uppercase tracking-wider hover:bg-secondary transition-colors duration-200" href="contact.html">Get a Consultation</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 md:pb-12 bg-surface"><div class="flex flex-col w-full">
+<!-- Page Hero Header Section -->
+<section class="relative w-full bg-surface-container-low px-4 py-8 md:py-12 overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-6xl mx-auto flex flex-col gap-3 relative z-10">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="index.html">Home</a>
+<span class="text-secondary">/</span>
+<span class="text-primary font-bold">Projects</span>
+</nav>
+<div class="flex flex-col gap-2 pt-2">
+<div class="inline-flex items-center gap-2 self-start px-2.5 py-1 bg-surface-container rounded-full text-secondary">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Curated Portfolio</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">Our Projects</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+          Explore spaces designed with creativity, functionality and attention to detail. Every residence and venue reflects quiet architectural prestige tailored to individual rhythms.
+        </p>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-3 gap-3 pt-4 max-w-md">
+<div class="bg-surface-container p-3 rounded-lg flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">120+</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">Completed</span>
+</div>
+<div class="bg-surface-container p-3 rounded-lg flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">14</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">Design Awards</span>
+</div>
+<div class="bg-surface-container p-3 rounded-lg flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">100%</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">Bespoke</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Category Filters Bar -->
+<section class="sticky top-16 z-30 bg-surface/95 backdrop-blur-md py-4 px-4 shadow-sm">
+<div class="max-w-6xl mx-auto flex items-center justify-between gap-3">
+<div aria-label="Project Categories" class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar w-full" id="filterContainer" role="tablist">
+<button class="filter-btn active-filter px-4 py-2 bg-primary text-on-primary font-button-text text-button-text tracking-wider uppercase whitespace-nowrap rounded-lg shadow-sm transition-all duration-200" data-filter="all" type="button">
+          All
+        </button>
+<button class="filter-btn px-4 py-2 bg-surface-container text-on-surface font-button-text text-button-text tracking-wider uppercase whitespace-nowrap rounded-lg hover:bg-surface-container-high transition-all duration-200" data-filter="Living Room" type="button">
+          Living Room
+        </button>
+<button class="filter-btn px-4 py-2 bg-surface-container text-on-surface font-button-text text-button-text tracking-wider uppercase whitespace-nowrap rounded-lg hover:bg-surface-container-high transition-all duration-200" data-filter="Bedroom" type="button">
+          Bedroom
+        </button>
+<button class="filter-btn px-4 py-2 bg-surface-container text-on-surface font-button-text text-button-text tracking-wider uppercase whitespace-nowrap rounded-lg hover:bg-surface-container-high transition-all duration-200" data-filter="Kitchen" type="button">
+          Kitchen
+        </button>
+<button class="filter-btn px-4 py-2 bg-surface-container text-on-surface font-button-text text-button-text tracking-wider uppercase whitespace-nowrap rounded-lg hover:bg-surface-container-high transition-all duration-200" data-filter="Wardrobe" type="button">
+          Wardrobe
+        </button>
+<button class="filter-btn px-4 py-2 bg-surface-container text-on-surface font-button-text text-button-text tracking-wider uppercase whitespace-nowrap rounded-lg hover:bg-surface-container-high transition-all duration-200" data-filter="Commercial" type="button">
+          Commercial
+        </button>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-on-surface-variant font-label-caps text-label-caps shrink-0">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+<span id="projectCountDisplay">12 Works</span>
+</div>
+</div>
+</section>
+<!-- Gallery Grid Section -->
+<section class="max-w-6xl mx-auto w-full px-4 py-6 md:py-10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+<!-- Card 1 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Living Room">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="High-end modern urban apartment living room with expansive floor-to-ceiling glass windows, ribbed travertine feature wall, low-profile oatmeal linen sectional sofa, warm directional brass downlighting, and subtle sculptural walnut side tables in soft daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWSZL0DA3ZLQPsnAV7BfTykth60LXg-u38MULB9Xj3ZqpFWn11yrrhu7Z9YpzXrqc_KOFTCFwSRIgStBmHhWirP2xvdQu8-uV52KSIvUz8QNqe_rFLPvI8jwq1Kwh5GLCNACSwL4fK3z67eKbFSMsdD-b3JmZ1U5arFKSZNSQoJ7xuI-UnIY924tJLE6cCBTdBQiB0ff43YmvvYflLdi4zmrib2xLDI-kvjnj9ep8D6nrIxlUnJsLL"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Living Room
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Bengaluru â€¢ 2,400 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Modern Urban Residence</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              A light-filled contemporary lounge celebrating spatial geometry, raw travertine claddings, and artisanal walnut accents.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Residential Interior</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="High-end modern urban apartment living room with expansive floor-to-ceiling glass windows, ribbed travertine feature wall, low-profile oatmeal linen sectional sofa, warm directional brass downlighting, and subtle sculptural walnut side tables in soft daylight." data-area="2,400 sq.ft" data-category="Living Room" data-desc="Crafted for an avid art collector, this urban haven introduces uninterrupted visual continuity from the sunlit foyer to the salon lounge. Custom-milled walnut slats discreetly obscure integrated HVAC grilles, while warm museum-grade 2700K illumination frames organic textured canvas art." data-location="Bengaluru, Lavelle Road" data-materials="Travertine, Italian Boucle, Fluted Walnut, Brushed Brass" data-title="Modern Urban Residence" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Bedroom">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Luxurious serene master bedroom suite with natural acoustic felt wall paneling, a low platform bed upholstered in taupe boucle, ambient cove lighting, warm oak chevron parquetry floors, and sheer linen window draperies blowing softly in gentle morning illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmGuiJtqx8KstDObjAUUhzkg6Dyfp9mTrzblSFsMp2PYfzCIouqfb6FDeS3fAlNKTJSqS0BN0ydpMeWRznEqeQv2plTscm6vNGAQjB-xAN9-oNcxw5YDnK5OurSYQkWBKqWLKfZQOKBKrkdUlSIuG20mo72MVFQSH5qhI05iMUyktlN14u4fMb0amhy_c1CE4HVZHMCym4USBUpk00CzFK6MhKNZOtcmoJkG7mGOrZJA-6SBGlP28z"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Bedroom
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Hyderabad â€¢ 650 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Serene Master Suite</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Quiet prestige grounded by tactile acoustic fabric headboards, indirect perimeter glows, and bespoke nightstands.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Private Sanctuary</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="Luxurious serene master bedroom suite with natural acoustic felt wall paneling, a low platform bed upholstered in taupe boucle, ambient cove lighting, warm oak chevron parquetry floors, and sheer linen window draperies blowing softly in gentle morning illumination." data-area="650 sq.ft" data-category="Bedroom" data-desc="Conceived as an antidote to urban sensory overload, the master suite leverages muted earth pigments, soft fabric wall panels, and circadian-synced cove luminaires. The floating platform bed commands gentle perspective over a landscaped exterior courtyard." data-location="Hyderabad, Jubilee Hills" data-materials="Oak Parquetry, Acoustic Felt, Brushed Bronze, Belgian Linen" data-title="Serene Master Suite" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Kitchen">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Sophisticated contemporary luxury modular kitchen showing a massive Calacatta gold marble waterfall island with recessed seating, deep charcoal matte cabinetry, integrated brass recessed handles, and warm tinted glass pendant fixtures casting soft reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfFO6CW7BHNSEQWGPZUcSSWtii98vI33vxrsDvND5BqaOtXr0PkjfwUcPVzTQPwoisLTsnlf8Ep-JjrytTE-9ReiDkKkShAOXQ5yVOcQPE7IsL7_4jdvNSVtfl2aosagtet0O6FxCXojqfpQBS1FFnW40Qupgv_EPiNDGMidOM8RCrQmzXUXf-5rUy1d3QXdBOvjb1Wv-75Ygr-pEW59qBKuXnP2hYI-dq-6HaoAP3sp1dW96UbdUA"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Kitchen
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Bengaluru â€¢ 420 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Luxe Marble Modular Kitchen</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Sculptural Calacatta marble waterfall island paired with anti-fingerprint charcoal cabinetry and Blum motorized hardware.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Culinary Studio</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="Sophisticated contemporary luxury modular kitchen showing a massive Calacatta gold marble waterfall island with recessed seating, deep charcoal matte cabinetry, integrated brass recessed handles, and warm tinted glass pendant fixtures casting soft reflections." data-area="420 sq.ft" data-category="Kitchen" data-desc="An entertainer's dream kitchen balancing high-output culinary efficiency with minimalist aesthetics. An island with waterfall mitered returns houses hidden spice drawers and induction downdraft ventilation, maintaining crisp visual sightlines." data-location="Bengaluru, Indiranagar" data-materials="Calacatta Gold Quartz, Anti-Fingerprint Matte Laminate, Smoked Glass, Blum Aventos" data-title="Luxe Marble Modular Kitchen" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Wardrobe">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="High-end architectural walk-in closet dressing room with integrated warm 3000K LED vertical lighting strips inside dark fluted timber cabinets, bronze tinted glass doors, a central leather accessory island with watch winders, and plush velvet seating." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP2hFrG4H_MMXuFMTiRJBVrnznm0E4-7k_EpuNWTApC4AjrqLavu1gIi8jx69Fh0BnjhIqEZ0lE1d3trMCWpwu7c89Zf0jxY3zpNQ8ILmW4CaLlJsRgdp_BDp4wb1QPr-KVFSaRNMp5hYklaXPM0XuAS3AyfjvFHig-Nt3qx6kusDTX7ZqdIWmqt049skOxQZ44pEiXuYFqn4Ii9jLQ_3Jnz4x6CISvjJVqfpjPQ6isUYZZJdvELMP"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Wardrobe
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Bengaluru â€¢ 320 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Bespoke Walk-in Wardrobe</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Fluted smoked oak cases, custom jewelry velvet inserts, and sensored vertical edge-lit bronze profiles.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Custom Joinery</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="High-end architectural walk-in closet dressing room with integrated warm 3000K LED vertical lighting strips inside dark fluted timber cabinets, bronze tinted glass doors, a central leather accessory island with watch winders, and plush velvet seating." data-area="320 sq.ft" data-category="Wardrobe" data-desc="Precision tailor-made storage designed for bespoke fashion collections. Integrated temperature-regulated timepiece showcases, ambient sensor-activated garment bars, and velvet drawer partitions guarantee everyday effortless luxury." data-location="Bengaluru, Sadashivanagar" data-materials="Smoked Oak, Bronze Anodized Profiles, Cognac Italian Leather, Fluted Glass" data-title="Bespoke Walk-in Wardrobe" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Commercial">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Modern high-concept executive tech headquarters lobby with curved slatted wood architectural pavilion walls, polished terrazzo flooring, indoor tropical ficus planter installations, and minimalist sculptural acoustic furniture under architectural skylights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChkZKYy4eUkejAwoVza6ZANeR692tSyLRp9yepHUV_zQUdJgPnXROBlSmioA0TBipjk4buRW3eULj-ZfTXBvU9ey9LSo3X1NxZSe863O6kp33JQkQeBMTcXlYcSNFplQ6KjAlP3o_sjNPpmU6KZhSpMdV7HOQ4WZxITuTBL8wAVru3SBYQNtCeefPDKJ9IDH-hJTpDvbBYFxRbvueYAE8YlHKyXrxoYalYULfDVfF9ZQ46w0XtYWH6"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Commercial
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Hyderabad â€¢ 8,500 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Tech Innovators HQ</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Biophilic curved acoustics, collaborative breakout pods, and seamless tech-integrated boardrooms.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Workspace Architecture</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="Modern high-concept executive tech headquarters lobby with curved slatted wood architectural pavilion walls, polished terrazzo flooring, indoor tropical ficus planter installations, and minimalist sculptural acoustic furniture under architectural skylights." data-area="8,500 sq.ft" data-category="Commercial" data-desc="Crafted for an AI enterprise, this project breaks corporate monotony with rhythmic wooden arches, natural air-purifying foliage cores, and flexible meeting zones engineered for quiet concentration and lively team synergy." data-location="Hyderabad, HITEC City" data-materials="Terrazzo, Curved Micro-Timber Ribs, Recycled Felt Panels, Architectural Glass" data-title="Tech Innovators HQ" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Living Room">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Warm minimalist luxury villa living room with double-height ceiling, lime wash sand-toned walls, cantilevered limestone fireplace bench, organic curved white sofas, and dry branch ceramic arrangement in warm natural afternoon sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnB-GwZzNgmTBKvi7MK_f2Pg3rj8jovko_9V5ZpekpViihxYNhVPLJlONRJhL5gpkYuRZaTaXgRKiZ2HKI1moq7TqVEtKc_lK15zXBZZBPT27AQRn8S_9fNfBtuaJO5lUan7wM2zOZnD-JHREJqdDIPk3O1AZdw6SoB1DaegSo_Nzde6DDqHOaTXALDthIiXdVOX4u4lRUYEH4lReyVKxZPdLIP5Ox28yQZnAERt7MfbIHTHkpKifx"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Living Room
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Bengaluru â€¢ 3,800 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Minimalist Warm Villa</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Double-height lime-wash volume anchored by bespoke monolithic limestone fireplace and curbed seating.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Villa Interior</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="Warm minimalist luxury villa living room with double-height ceiling, lime wash sand-toned walls, cantilevered limestone fireplace bench, organic curved white sofas, and dry branch ceramic arrangement in warm natural afternoon sunlight." data-area="3,800 sq.ft" data-category="Living Room" data-desc="A celebration of unadorned surfaces and natural illumination. The expansive double-height salon uses tactile lime plaster to soften shadow gradations, yielding an ethereal sanctuary that transitions peacefully from day to night." data-location="Bengaluru, Whitefield" data-materials="Lime Plaster, Raw Jura Limestone, Bleached Ash Wood, Matte Brass" data-title="Minimalist Warm Villa" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 7 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Bedroom">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Contemporary luxury penthouse master bedroom at dusk with warm mood lighting, walnut wood slat feature wall behind a king-size upholstered bed, integrated reading spotlights, and panoramic city lights visible through large corner windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe37MQNPdKy7d5E6GUh6OqqvAkkUvxt5u3gBlr6LD8WqA32X5JsI0i-OOIvKyVYcw9srnrkn6RJ4-5FRFDhH1nioe0jkxIGuTfY7uQnHa4BTysBFaMYcYmeVP8yyr3Lh0gPV2IHoNan_MpXyLgbm_jw1Y01JCzkOS5d7YVTH2JaXzSSVVniAtASLPmA1yGU6KbaNlCjOpQTLcey6Cg-pcuop3NNofptwAxtwu6dcW0V2L2ICacQK8q"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Bedroom
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Hyderabad â€¢ 720 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Contemporary Penthouse Suite</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Panoramic high-rise sleeping retreat enclosed by deep American walnut panels and bespoke integrated lighting.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Penthouse Architecture</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="Contemporary luxury penthouse master bedroom at dusk with warm mood lighting, walnut wood slat feature wall behind a king-size upholstered bed, integrated reading spotlights, and panoramic city lights visible through large corner windows." data-area="720 sq.ft" data-category="Bedroom" data-desc="Perched 35 floors above the city, this penthouse suite balances nocturnal drama with restorative daytime calm. Motorized blackout drapes slide into recessed ceiling pockets to unveil sweeping skyline vistas upon waking." data-location="Hyderabad, Gachibowli" data-materials="American Walnut, Silk Blend Carpeting, Matte Anodized Aluminum, Alabaster Sconces" data-title="Contemporary Penthouse Suite" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 8 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Kitchen">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Scandinavian style open-concept kitchen with natural white oak fluted island base, pristine honed white composite stone countertop, minimalist brass gooseneck faucet, light olive green shaker perimeter cabinets, and sunlit window herbs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVAKM8RvANAdTzBNaBua2UIjwT_3p8Bq44WclMsZluOACodrSYu2kKKkunpMd0b2OA6ExPRIQ_2ctB25Qwu3ALvEY-n5P5s2TRLCgmy3H0kvb6KjharqscrFgYG4IA3FQbtT5BIESZAYULmse1iwB7C6hWN1ffq72Zf8QjiCbeeZixWSY_N2-fR3ON6jDc17NnN6VAtB_yEwnZ-_4XUjSPuuzKs37SHKbc7SMuC7UqHhuIgVBnpPqG"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Kitchen
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Bengaluru â€¢ 380 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Scandinavian Island Kitchen</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Fluted blonde oak central island, subtle sage cabinetry, and seamless concealed pantry doors.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Nordic Warmth</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="Scandinavian style open-concept kitchen with natural white oak fluted island base, pristine honed white composite stone countertop, minimalist brass gooseneck faucet, light olive green shaker perimeter cabinets, and sunlit window herbs." data-area="380 sq.ft" data-category="Kitchen" data-desc="Crafted for casual morning breakfasts and joyful cooking, this layout prioritizes organic ergonomics. Deep touch-to-open utensil organizers and a custom spice nook keep preparation effortless and surfaces impeccably tidy." data-location="Bengaluru, Sarjapur" data-materials="Solid Scandinavian Oak, Honed White Quartzite, Ceramic Handmade Subway Tiles" data-title="Scandinavian Island Kitchen" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 9 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Wardrobe">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Modern sleek sliding wardrobe system with floor-to-ceiling smoked reflective glass doors, ultra-thin dark bronze aluminum frames, warm internal shelf edge backlighting displaying tailored jackets and shoes, set in an elegant dressing area." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOSvjIdyGQq_zVp3IeHqncxo7u9n8-KD9YP0UO1OuCPOeh53WIU94yORj4r2Bd6PCvQ4LqnzriPrM5H_ZJiL3BkZhGXA8fAbUQg3iCd-DWIo5sVpNyHY1ml8vcfTx2bGWi_ipD5_nny1xDj2pGSae7WheDKDDFX9SQpkrKegayb_wj6pG3rw68sVLR9-1LEA9sA2ynn3NYpiTquGNtzevmqFGdgyOJ-e7z3m8qav-Q34UlXQFiN9Rz"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Wardrobe
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Bengaluru â€¢ 260 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Sleek Sliding Glass Wardrobe</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Whisper-quiet floor-to-ceiling smoked glass sliding system with concealed dampers and motion sensor lights.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Wardrobe Architecture</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="Modern sleek sliding wardrobe system with floor-to-ceiling smoked reflective glass doors, ultra-thin dark bronze aluminum frames, warm internal shelf edge backlighting displaying tailored jackets and shoes, set in an elegant dressing area." data-area="260 sq.ft" data-category="Wardrobe" data-desc="This wardrobe design acts as a reflective architectural partition when dormant, transforming into an illuminated boutique vitrine as one steps closer. Zero bottom rails ensure effortless barefoot movement across smooth micro-cement floors." data-location="Bengaluru, Koramangala" data-materials="Smoked Reflective Float Glass, Anodized Carbon Extrusions, Textured Leatherette Shelving" data-title="Sleek Sliding Glass Wardrobe" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 10 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Commercial">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="High-end boutique designer retail store interior with minimalist stucco display plinths, recessed warm directional spotlights, arched wall niches holding perfumes and curated leather goods, polished concrete floors, and champagne gold metallic accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd0gRTn_rmaDiWCmZ2aTq0crBfOLO-DAlMywbPbgdpjbnM5HyvWYQ48n4Aonsrc1vMmQjYu037ih7khO-0G8PqbTf1rkDiafpQu3-G43uKWbe3eLV7c8XVU3GrFVkL0oouBGqtYLX1HbW6eof-ZjMmnMW3hYupOVwadnM5QG1iflAzuHPqyRIENTh3B0B52FAjFuKV9oSUUje80eLLNmThe5ZkVzDLsAQ6EVofVYaBw_7nbDdLYa1n"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Commercial
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Bengaluru â€¢ 1,600 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Boutique Retail Space</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Editorial retail concept featuring sculptural plaster pedestals, champagne metal rails, and warm archways.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Retail Experience</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="High-end boutique designer retail store interior with minimalist stucco display plinths, recessed warm directional spotlights, arched wall niches holding perfumes and curated leather goods, polished concrete floors, and champagne gold metallic accents." data-area="1,600 sq.ft" data-category="Commercial" data-desc="Crafted for an artisanal lifestyle label, the interior evokes an ancient gallery where products become sculpted artifacts. Fluid circulation paths gently guide visitors through sensory display chambers." data-location="Bengaluru, UB City" data-materials="Micro-Cement, Champagne Brushed Metal, Natural Tadelakt, Handcrafted Terracotta" data-title="Boutique Retail Space" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 11 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Living Room">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Sophisticated evening salon lounge with deep forest green velvet barrel armchairs, rich smoked walnut library wall shelves with backlit books, round brass cocktail table, warm ambient table lamp glow, and geometric patterned wool rug." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMn2X8fbJj7acuKDioPAY-AhQWuwvasGcOg0JpgkpiCX0CpOKTjbguDBBNfZP09L4yC0fm43skT3lWOCffxLY0WT-HjIEC3yywe2jjz5wLvaTmbsjJ9LaRII9N1pVEsky5fRUnSwFzBsCpH65tgOlOsA1HN2mU6bHudkJq9z57OMVPvkpX7sDY1hWTZd53tYQu01o_5tte5HqbUu8fs3McHr1xoQPHRcNBQuWXYv_yAMHpTjJGB7gq"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Living Room
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Hyderabad â€¢ 1,950 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Velvet Accent Lounge</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Intimate evening gathering salon highlighting tactile emerald velvet chairs, library shelving, and brass accents.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Salon Living</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="Sophisticated evening salon lounge with deep forest green velvet barrel armchairs, rich smoked walnut library wall shelves with backlit books, round brass cocktail table, warm ambient table lamp glow, and geometric patterned wool rug." data-area="1,950 sq.ft" data-category="Living Room" data-desc="Engineered specifically for twilight conversation and reading. Warm accent downlights illuminate personal book collections while sound-absorbing velvet paneling isolates the salon from adjacent household movement." data-location="Hyderabad, Banjara Hills" data-materials="Emerald Italian Velvet, Smoked Walnut, Patinated Brass, Wool Area Rug" data-title="Velvet Accent Lounge" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 12 -->
+<article class="project-card flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-category="Bedroom">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Serene Japanese Nordic fusion Zen guest bedroom with low tatami-inspired light ash bed frame, washi paper pendant light shade, pale neutral clay walls, minimalist bonsai branch in black stoneware vase, and soft indirect floor wash light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI8-Ska0a05w3Ir5p4AvyXiCYxlzOFdAwiu9CVJ3q9Fv2AMwTRpIQzVUHAyEPmlbDKCmdpC6ZTsuViXijp7zBqp8QgA9zan1UcsU29OXsiuHBEss9SfMt_-9LknFiuWxcfAOl8p87MtImLLHoHgkNj63bjfbOEp4Ms9ZX4qU19FIPBVc21XPFfiFvGRzOTcMfwDeDIFdHcwFYxgydrXSxdbvEM21qb_NWvm6i11UFspqCjmHZLgosj"/>
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md px-3 py-1 font-label-caps text-label-caps text-primary uppercase rounded-full shadow-sm">
+            Bedroom
+          </span>
+<span class="absolute bottom-3 right-3 bg-primary/80 backdrop-blur-md text-on-primary px-2 py-0.5 font-label-caps text-[10px] uppercase rounded">
+            Bengaluru â€¢ 480 sq.ft
+          </span>
+</div>
+<div class="p-5 flex flex-col justify-between flex-1 gap-4">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Nordic Zen Guestroom</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Japandi sensibilities with low-slung ash frames, authentic washi paper luminaires, and breathable clay plaster.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-caps text-label-caps text-secondary font-medium uppercase">Guest Retreat</span>
+<button class="open-modal-btn inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" data-alt-prompt="Serene Japanese Nordic fusion Zen guest bedroom with low tatami-inspired light ash bed frame, washi paper pendant light shade, pale neutral clay walls, minimalist bonsai branch in black stoneware vase, and soft indirect floor wash light." data-area="480 sq.ft" data-category="Bedroom" data-desc="Crafted to provide visiting friends a restful retreat inspired by Kyoto ryokans. Natural materials regulate ambient humidity and temperature passively while soft paper lamps cultivate tranquil unwinding." data-location="Bengaluru, Malleshwaram" data-materials="Solid Ash Wood, Washi Paper, Natural Clay Stucco, Unbleached Cotton" data-title="Nordic Zen Guestroom" type="button">
+<span>View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty State (Hidden by default) -->
+<div class="hidden flex-col items-center justify-center py-16 text-center bg-surface-container-low rounded-2xl p-8 my-4" id="noResultsState">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-[32px]">filter_list_off</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">No spaces in this category yet</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-2">
+        We frequently unveil completed architectural commissions. Check back shortly or reset your filters.
+      </p>
+<button class="mt-5 px-5 py-2.5 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" id="resetFilterBtn" type="button">
+        Show All Projects
+      </button>
+</div>
+</section>
+<!-- CTA Banner Section -->
+<section class="max-w-6xl mx-auto w-full px-4 py-8">
+<div class="relative bg-primary text-on-primary rounded-2xl p-8 md:p-12 overflow-hidden shadow-lg flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-secondary/20 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-3 relative z-10 text-center md:text-left">
+<div class="inline-flex items-center gap-2 self-center md:self-start px-3 py-1 bg-surface/10 rounded-full text-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]">handshake</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider">Start Your Journey</span>
+</div>
+<h2 class="font-headline-md text-headline-md tracking-tight text-surface-container-lowest">
+          Have an Interior Project in Mind?
+        </h2>
+<p class="font-body-md text-body-md text-on-primary-container max-w-xl">
+          Tell us about your space and let's explore the possibilities. From raw footprints to bespoke turnkey handovers, IRA crafts spaces that endure.
+        </p>
+</div>
+<div class="relative z-10 shrink-0 flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto justify-center">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-secondary text-on-secondary font-button-text text-button-text uppercase tracking-wider rounded-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-200 shadow-md" href="contact.html">
+<span>Contact Us</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Project Detail Modal Backdrop & Container -->
+<div aria-labelledby="modalTitle" aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="projectModal" role="dialog">
+<div class="relative w-full max-w-2xl max-h-[90vh] bg-surface-container-lowest text-on-surface rounded-2xl overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300" id="modalBox">
+<!-- Close Button -->
+<button aria-label="Close Project Preview" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-surface/90 backdrop-blur-md text-on-surface flex items-center justify-center shadow-md hover:bg-primary hover:text-on-primary transition-colors" id="closeModalBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<!-- Large Image Preview Area -->
+<div class="relative w-full aspect-[16/10] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High-end interior architecture design photography showcasing bespoke furniture and curated ambient lighting." id="modalImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtWEndbL8Cx9I1dO0YaBcENe-x3okdhmrgF1DBqglqGGEQq40g7Htn0-zCBIO6eo5eLkszu8KnAyPAvEwmCNtoI5X_Xm-cd6gBS1AkHb2f3d_f_2_U6OJIWK77waAsnzR4u2qwSAtF2NaIzWNlmOnAL2vipJ37dZI6XbUIOcJS6jAzKyzgffUj4NvjGer9dSgpGfiuQBp1iCu2N0iiqle58AQH5ZKjZvcUZ5A4mgXdRfnxKrbJJjmF"/>
+<span class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-md text-primary font-label-caps text-label-caps uppercase px-3 py-1.5 rounded-full shadow-sm" id="modalCategoryBadge">
+          Living Room
+        </span>
+</div>
+<!-- Modal Body Information -->
+<div class="p-6 md:p-8 flex flex-col gap-6">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 text-secondary font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span id="modalLocation">Bengaluru</span>
+<span>â€¢</span>
+<span id="modalArea">2,400 sq.ft</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight" id="modalTitle">Project Title</h2>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col gap-1">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">Material Palette &amp; Finishes</span>
+<p class="font-body-sm text-body-sm text-primary font-medium" id="modalMaterials">Italian Marble, Brushed Brass, Fluted Oak</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-semibold">Architectural Narrative</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="modalDesc">
+            Full project narrative and spatial considerations will appear here.
+          </p>
+</div>
+<div class="pt-4 flex flex-col sm:flex-row gap-3 items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+<span>IRA Studio Design &amp; Execution</span>
+</div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-on-primary font-button-text text-button-text uppercase rounded-lg hover:bg-secondary transition-colors" href="contact.html">
+<span>Enquire For Similar Space</span>
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Local Client-Side Interactive Filtering and Modal Behavior -->
+<script>
+    (function () {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.project-card');
+      const noResults = document.getElementById('noResultsState');
+      const countDisplay = document.getElementById('projectCountDisplay');
+      const resetBtn = document.getElementById('resetFilterBtn');
+
+      const modal = document.getElementById('projectModal');
+      const modalBox = document.getElementById('modalBox');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const openModalButtons = document.querySelectorAll('.open-modal-btn');
+
+      const modalTitle = document.getElementById('modalTitle');
+      const modalCatBadge = document.getElementById('modalCategoryBadge');
+      const modalDesc = document.getElementById('modalDesc');
+      const modalLocation = document.getElementById('modalLocation');
+      const modalArea = document.getElementById('modalArea');
+      const modalMaterials = document.getElementById('modalMaterials');
+      const modalImage = document.getElementById('modalImage');
+
+      // Category Filtering Functionality
+      function applyFilter(category) {
+        let visibleCount = 0;
+
+        filterButtons.forEach(btn => {
+          if (btn.getAttribute('data-filter') === category) {
+            btn.classList.add('bg-primary', 'text-on-primary');
+            btn.classList.remove('bg-surface-container', 'text-on-surface');
+          } else {
+            btn.classList.remove('bg-primary', 'text-on-primary');
+            btn.classList.add('bg-surface-container', 'text-on-surface');
+          }
+        });
+
+        cards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (category === 'all' || cardCat === category) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        if (countDisplay) {
+          countDisplay.textContent = visibleCount + ' Works';
+        }
+
+        if (noResults) {
+          if (visibleCount === 0) {
+            noResults.classList.remove('hidden');
+            noResults.classList.add('flex');
+          } else {
+            noResults.classList.add('hidden');
+            noResults.classList.remove('flex');
+          }
+        }
+      }
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const cat = btn.getAttribute('data-filter');
+          applyFilter(cat);
+        });
+      });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          applyFilter('all');
+        });
+      }
+
+      // Modal Open Handlers
+      openModalButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const title = btn.getAttribute('data-title');
+          const category = btn.getAttribute('data-category');
+          const desc = btn.getAttribute('data-desc');
+          const loc = btn.getAttribute('data-location');
+          const area = btn.getAttribute('data-area');
+          const mats = btn.getAttribute('data-materials');
+          const altPrompt = btn.getAttribute('data-alt-prompt');
+
+          modalTitle.textContent = title;
+          modalCatBadge.textContent = category;
+          modalDesc.textContent = desc;
+          modalLocation.textContent = loc;
+          modalArea.textContent = area;
+          modalMaterials.textContent = mats;
+          modalImage.setAttribute('data-alt', altPrompt || ('Interior design of ' + title));
+
+          // Reveal modal with gentle scale
+          modal.classList.remove('opacity-0', 'pointer-events-none');
+          modalBox.classList.remove('scale-95');
+          modalBox.classList.add('scale-100');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      // Modal Close Handlers
+      function hideModal() {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modalBox.classList.remove('scale-100');
+        modalBox.classList.add('scale-95');
+        document.body.style.overflow = '';
+      }
+
+      if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', hideModal);
+      }
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          hideModal();
+        }
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          hideModal();
+        }
+      });
+    })();
+  </script>
+</div><footer class="w-full bg-surface-container-low text-on-surface pt-12 pb-24 md:pb-12 px-6 md:px-12 mt-16"><div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="flex flex-col gap-3"><div class="flex items-center gap-2"><img alt="IRA Interior Studio Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WeHykTn7Gx1sYGz3Bn0yojOR3tm8xFNgksnQWmoo8_h_ZKhHFVk7hwZBiUwcIRwL5FyBeE0mbIci5sD-7_PcWWUVjjGUqMX7ht9y-iLEEdLKyQmjI6-eqXB5Lj7Ec5-ARlBtwPGC8Yl8wgB5bTMp-8mpoJliGOfHFR8g1fcUhD_i_EgdqPtCDjBc4kLoS21cvtI_CQdISOvxB96cA3wyUqTPFKkm34U4P6qRYx8BzEQm_Qv-ESJrKspRg"/><span class="font-headline-sm text-headline-sm text-primary">IRA STUDIO</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Bespoke residential and commercial interior architecture. Balancing warm minimalism with quiet prestige to curate architectural spaces tailored to individual lifestyles.</p></div><div class="flex flex-col gap-3"><h4 class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Quick Links</h4><ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="home" href="index.html">Home</a></li><li><a class="hover:text-primary transition-colors" data-path="about" href="about.html">About</a></li><li><a class="hover:text-primary transition-colors" data-path="services" href="service.html">Services</a></li><li><a class="hover:text-primary transition-colors" data-path="projects" href="project.html">Projects</a></li><li><a class="hover:text-primary transition-colors" data-path="contact" href="contact.html">Contact</a></li></ul></div><div class="flex flex-col gap-3"><h4 class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Services</h4><ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><li>Residential Interiors</li><li>Modular Kitchens</li><li>Wardrobes</li><li>Commercial Interiors</li><li>Custom Interiors</li></ul></div><div class="flex flex-col gap-3"><h4 class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Contact Details</h4><div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-secondary">call</span>+91 XXXXX XXXXX</p><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-secondary">mail</span>info@example.com</p><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-secondary">location_on</span>Bengaluru &amp; Hyderabad, India</p></div><div class="flex items-center gap-3 pt-2 text-primary"><a aria-label="Instagram" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a aria-label="Facebook" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">share</span></a><a aria-label="YouTube" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">smart_display</span></a><a aria-label="Pinterest" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">push_pin</span></a></div></div></div><div class="max-w-7xl mx-auto pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant/80"><p>Â© 2025 IRA INTERIOR STUDIO. All Rights Reserved.</p><div class="flex gap-4"><a class="hover:text-primary transition-colors" href="contact.html">Privacy Policy</a><a class="hover:text-primary transition-colors" href="contact.html">Terms of Service</a></div></div></footer></main><a aria-label="WhatsApp Enquiry" class="fixed bottom-24 md:bottom-8 right-5 z-40 w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.15)] hover:scale-105 active:scale-95 transition-transform duration-200" href="https://wa.me/91XXXXXXXXXX" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[24px]">chat</span></a><nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-2"><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="index.html"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Home</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="about.html"><span class="material-symbols-outlined text-[20px]">architecture</span><span class="font-label-caps text-[10px] tracking-wider uppercase">About</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="service.html"><span class="material-symbols-outlined text-[20px]">design_services</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Services</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 transition-colors text-primary font-semibold" data-path="projects" href="project.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Projects</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="contact.html"><span class="material-symbols-outlined text-[20px]">mail</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Contact</span></a></div></nav></body></html>

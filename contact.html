@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fef9f0;color:#1d1c16;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#fbddc8", "tertiary-fixed-dim": "#c8c6c5", "on-secondary": "#ffffff", "error": "#ba1a1a", "on-error-container": "#93000a", "tertiary-container": "#494949", "on-secondary-fixed-variant": "#5a4317", "on-tertiary-fixed": "#1b1c1c", "primary-container": "#594536", "on-tertiary": "#ffffff", "surface-container-high": "#ece8df", "surface-dim": "#ded9d1", "background": "#fef9f0", "error-container": "#ffdad6", "on-tertiary-container": "#bab8b8", "secondary-container": "#fedba1", "outline-variant": "#d2c4bb", "primary-fixed-dim": "#dec1ad", "on-surface-variant": "#4e453f", "surface": "#fef9f0", "inverse-primary": "#dec1ad", "on-primary-container": "#cfb3a0", "on-error": "#ffffff", "surface-container-highest": "#e7e2d9", "secondary-fixed-dim": "#e3c28a", "outline": "#80756e", "primary": "#412f21", "on-primary-fixed": "#27180c", "secondary-fixed": "#ffdea8", "tertiary-fixed": "#e4e2e1", "on-background": "#1d1c16", "inverse-surface": "#32302b", "secondary": "#735a2c", "surface-container-low": "#f8f3ea", "on-tertiary-fixed-variant": "#474746", "on-secondary-container": "#785f30", "inverse-on-surface": "#f5f0e7", "on-primary-fixed-variant": "#574334", "tertiary": "#333232", "surface-variant": "#e7e2d9", "surface-bright": "#fef9f0", "surface-container": "#f2ede4", "surface-tint": "#705a4a", "on-secondary-fixed": "#271900", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "on-surface": "#1d1c16" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.75rem", "margin-desktop": "5rem", "gutter-desktop": "2.5rem", "space-sm": "0.5rem", "margin": "2rem", "space-xs": "0.25rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "margin-mobile": "1.25rem", "space-xl": "3rem" }, "fontFamily": { "display-hero-mobile": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Playfair Display" ], "button-text": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-sm": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "display-hero": [ "Playfair Display" ], "label-caps": [ "Plus Jakarta Sans" ], "subheading": [ "Playfair Display" ], "headline-lg-mobile": [ "Playfair Display" ] }, "fontSize": { "display-hero-mobile": [ "2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-md": [ "1rem", { "lineHeight": "1.625rem", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-sm": [ "0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "0.015em", "fontWeight": "400" } ], "headline-md": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "button-text": [ "0.875rem", { "lineHeight": "1rem", "letterSpacing": "0.08em", "fontWeight": "500" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.875rem", "letterSpacing": "0.01em", "fontWeight": "300" } ], "headline-sm": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "0em", "fontWeight": "500" } ], "headline-lg": [ "3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "display-hero": [ "4.5rem", { "lineHeight": "5rem", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "label-caps": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.15em", "fontWeight": "600" } ], "subheading": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0.02em", "fontWeight": "400" } ], "headline-lg-mobile": [ "2rem", { "lineHeight": "2.5rem", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen relative"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-4 md:px-8 flex items-center justify-between max-w-7xl mx-auto w-full"><div class="flex items-center gap-3"><img alt="IRA Interior Studio Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WeHykTn7Gx1sYGz3Bn0yojOR3tm8xFNgksnQWmoo8_h_ZKhHFVk7hwZBiUwcIRwL5FyBeE0mbIci5sD-7_PcWWUVjjGUqMX7ht9y-iLEEdLKyQmjI6-eqXB5Lj7Ec5-ARlBtwPGC8Yl8wgB5bTMp-8mpoJliGOfHFR8g1fcUhD_i_EgdqPtCDjBc4kLoS21cvtI_CQdISOvxB96cA3wyUqTPFKkm34U4P6qRYx8BzEQm_Qv-ESJrKspRg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">IRA</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest hidden sm:inline">Interior Studio</span></div></div><div class="hidden md:flex items-center gap-6"><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="index.html">Home</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="about.html">About</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="service.html">Services</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="projects" href="project.html">Projects</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="contact.html">Contact</a></div><div class="flex items-center gap-3"><span class="font-subheading text-subheading text-primary font-medium hidden lg:inline">Contact</span><a class="hidden sm:inline-flex items-center justify-center h-10 px-4 bg-primary text-on-primary font-button-text text-button-text uppercase tracking-wider hover:bg-secondary transition-colors duration-200" href="contact.html">Get a Consultation</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 md:pb-12 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Editorial Hero & Breadcrumb -->
+<section class="w-full px-4 sm:px-6 md:px-12 py-10 bg-surface-container-low text-on-surface">
+<div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+<nav aria-label="Breadcrumb" class="mb-4">
+<ol class="inline-flex items-center space-x-2">
+<li>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+</li>
+<li class="text-secondary font-label-caps text-label-caps">/</li>
+<li aria-current="page" class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Contact</li>
+</ol>
+</nav>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary mb-2">Concierge &amp; Architectural Advisory</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary tracking-tight mb-4">
+        Contact IRA INTERIOR STUDIO
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">
+        Letâ€™s discuss your ideas and create a space youâ€™ll love. Quiet prestige meets bespoke curation.
+      </p>
+<!-- Decorative Ambient Divider -->
+<div class="w-16 h-0.5 bg-secondary mt-6 rounded-full opacity-60"></div>
+</div>
+</section>
+<!-- Studio Atmosphere Vignette Strip -->
+<section class="w-full px-4 sm:px-6 md:px-12 -mt-4 mb-8">
+<div class="max-w-5xl mx-auto grid grid-cols-3 gap-2 sm:gap-4">
+<div class="relative overflow-hidden aspect-[16/10] bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Close up architectural detail of polished Calacatta marble countertop, warm brass bespoke tapware, soft natural morning daylight highlighting creamy veining and textured plaster wall, minimalist luxury interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALQRIHcpZquBB6xSMrXFaR6jND4iHNum8StV-LZxbUcvaOHH9idVuyDup3OS7KiD2Di_-3fnth3UO6jkEI2e7HmYaVEPgISHK5r-rrkOV6Fypv5mLGxr5l1yF425erT5dowHZguCHk6arohGoCimk8oNjxUD6eUI0SYyiYIkycrSlZ8-XuI79AqUeQdr4cd7jhjLEbGrpACNxuVf4-qCEjGwR8kYpbdV0TuK0uYbYAcQ-_k50Q1rCJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-2 sm:p-3">
+<span class="font-label-caps text-[10px] text-on-primary uppercase tracking-widest">Material Lab</span>
+</div>
+</div>
+<div class="relative overflow-hidden aspect-[16/10] bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Architectural studio table with raw walnut wood samples, linen swatches, hand-drawn floorplan sketches, and brass drafting instruments bathed in quiet warm lighting, editorial interior design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARvWMKCcnxf6aOwUp0HeEPTt9U0PqgvOpD09MerOzxfBtqRDEa_6kc0W2sL_HPYiVnIBLNOfFdebqCq92vEE_xg_ckNbTdWGw9Tqn3ubL2sKva9q7JTtuZUCIzvSI9RveELenDybtkpUWLoJ4Rtm-0aUii7h-lCgjxVZA1Mv4itP623ug_jdGNVBsRK_fFTTCf4D378ZSJaZ9Doxnow6LGDM4rVmKlAp76wQYEPfoY42CO94sTDwtS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-2 sm:p-3">
+<span class="font-label-caps text-[10px] text-on-primary uppercase tracking-widest">Design Atelier</span>
+</div>
+</div>
+<div class="relative overflow-hidden aspect-[16/10] bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Quiet contemporary luxury salon with sculptural boucle lounge chair, curated fluted oak wall paneling, subtle art spotlighting, warm cream interior aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuxcTQDgeQVJbhypA5YBoGQxSaC-qoo78fXIr4ha-bhvnEiSzu32sitH6Ut6BoNa_CpevfHX3s1dbR4qmsx7CKkAyC0Jn9CcFIx8vLCr0Uv155N6Xen_YGPAKwJys-Yna8OtwfQlST5-469NN7-JdXNCSUjM-501tTG9Q4FU1Mr42Cl-ksotVMIF5CQXcSACey0J-hRDCZ2mCnkUexIJxIEIuzKuglYtwFHi8PG55w01xSKUv79O43"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-2 sm:p-3">
+<span class="font-label-caps text-[10px] text-on-primary uppercase tracking-widest">Experience Suite</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Cards & Consultation Form Section -->
+<section class="w-full px-4 sm:px-6 md:px-12 py-6">
+<div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: 4 Luxury Informational Cards -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<div class="mb-2">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Direct Channels</span>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Studio Touchpoints</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Visit our experience galleria or initiate a private conversation with our principal partners.</p>
+</div>
+<!-- Card 1: Phone -->
+<a class="group block p-5 bg-surface-container shadow-sm hover:shadow-md transition-all duration-300" href="tel:+91XXXXXXXXXX">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 shrink-0 rounded-none bg-secondary-container flex items-center justify-center text-on-secondary-container group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">call</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-secondary font-semibold">Direct Inquiries</p>
+<h3 class="font-headline-sm text-[1.15rem] leading-snug text-primary font-medium mt-0.5 truncate">+91 XXXXX XXXXX</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Available for telephonic consultations &amp; WhatsApp concierge.</p>
+</div>
+</div>
+</a>
+<!-- Card 2: Email -->
+<a class="group block p-5 bg-surface-container shadow-sm hover:shadow-md transition-all duration-300" href="mailto:info@example.com">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 shrink-0 rounded-none bg-secondary-container flex items-center justify-center text-on-secondary-container group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-secondary font-semibold">Written Correspondence</p>
+<h3 class="font-headline-sm text-[1.15rem] leading-snug text-primary font-medium mt-0.5 truncate">info@example.com</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">RFP submissions, plan uploads &amp; media requests.</p>
+</div>
+</div>
+</a>
+<!-- Card 3: Location -->
+<div class="p-5 bg-surface-container shadow-sm">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 shrink-0 rounded-none bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[24px]">location_on</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-secondary font-semibold">Atelier &amp; Flagship</p>
+<h3 class="font-headline-sm text-[1.15rem] leading-snug text-primary font-medium mt-0.5">Bengaluru &amp; Hyderabad</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Flagship Studio &amp; Experience Centre (Gallery-grade material library &amp; spatial mockups).</p>
+</div>
+</div>
+</div>
+<!-- Card 4: Working Hours -->
+<div class="p-5 bg-surface-container shadow-sm">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 shrink-0 rounded-none bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[24px]">schedule</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-secondary font-semibold">Consultation Hours</p>
+<h3 class="font-headline-sm text-[1.15rem] leading-snug text-primary font-medium mt-0.5">Mon â€“ Sat: 9:00 AM â€“ 6:00 PM</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Sunday by Private Appointment Only.</p>
+</div>
+</div>
+</div>
+<!-- Studio Note -->
+<div class="p-4 bg-primary-container text-on-primary-container flex items-center gap-3 shadow-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-[22px]">verified</span>
+<p class="font-body-sm text-body-sm text-inverse-on-surface">Every engagement begins with an NDA-backed discovery dialogue and personalized material curation.</p>
+</div>
+</div>
+<!-- Right Column: Consultation Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-6 sm:p-8 shadow-md relative">
+<div class="mb-6">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">Project Inquiry</span>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Request an Architectural Consultation</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Please articulate your spatial requirements. Our senior architectural partner will review your brief.</p>
+</div>
+<!-- Demo Success Alert (id="formSuccessAlert") -->
+<div class="hidden mb-6 p-4 bg-secondary-container text-on-secondary-container shadow-sm" id="formSuccessAlert">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">check_circle</span>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase tracking-wider font-bold">Enquiry Registered</h4>
+<p class="font-body-sm text-body-sm mt-1 leading-snug">
+                Thank you! Your enquiry has been received. Our senior design team will contact you within 24 business hours.
+              </p>
+</div>
+</div>
+</div>
+<!-- Form (id="contactForm") -->
+<form class="flex flex-col gap-5" id="contactForm" novalidate="">
+<!-- Full Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant" for="fullName">
+              Full Name <span class="text-error">*</span>
+</label>
+<input class="w-full px-3 py-3 bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-colors" id="fullName" name="fullName" placeholder="e.g. Radhika Sundaram" required="" type="text"/>
+<span class="hidden text-error font-body-sm text-xs mt-0.5" id="nameError">Please provide your full name.</span>
+</div>
+<!-- Phone Number & Email (responsive row) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Phone Number -->
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant" for="phoneNumber">
+                Phone Number <span class="text-error">*</span>
+</label>
+<input class="w-full px-3 py-3 bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-colors" id="phoneNumber" name="phoneNumber" pattern="^[0-9+ -]{8,16}$" placeholder="+91 98765 43210" required="" type="tel"/>
+<span class="hidden text-error font-body-sm text-xs mt-0.5" id="phoneError">Please provide a valid phone number.</span>
+</div>
+<!-- Email Address -->
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant" for="emailAddress">
+                Email Address <span class="text-error">*</span>
+</label>
+<input class="w-full px-3 py-3 bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-colors" id="emailAddress" name="emailAddress" placeholder="radhika@domain.com" required="" type="email"/>
+<span class="hidden text-error font-body-sm text-xs mt-0.5" id="emailError">Please provide a valid email address.</span>
+</div>
+</div>
+<!-- Service Required Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant" for="serviceRequired">
+              Service Required <span class="text-error">*</span>
+</label>
+<div class="relative w-full">
+<select class="w-full appearance-none px-3 py-3 pr-10 bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-colors cursor-pointer" id="serviceRequired" name="serviceRequired" required="">
+<option disabled="" selected="" value="">Select a service...</option>
+<option value="Residential Interiors">Residential Interiors</option>
+<option value="Modular Kitchens">Modular Kitchens</option>
+<option value="Wardrobes &amp; Storage">Wardrobes &amp; Storage</option>
+<option value="Commercial Interiors">Commercial Interiors</option>
+<option value="False Ceiling &amp; Lighting">False Ceiling &amp; Lighting</option>
+<option value="Custom Furniture &amp; DÃ©cor">Custom Furniture &amp; DÃ©cor</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-secondary">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+<span class="hidden text-error font-body-sm text-xs mt-0.5" id="serviceError">Please select the service scope.</span>
+</div>
+<!-- Project Budget Band (Optional Delight Feature) -->
+<div class="flex flex-col gap-2 pt-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Estimated Investment Tier</span>
+<div class="grid grid-cols-3 gap-2">
+<button class="budget-pill py-2 px-3 text-center bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-xs tracking-wider transition-colors" data-budget="standard" type="button">
+                â‚¹15L â€“ â‚¹30L
+              </button>
+<button class="budget-pill py-2 px-3 text-center bg-primary text-on-primary font-label-caps text-xs tracking-wider transition-colors" data-budget="premium" type="button">
+                â‚¹30L â€“ â‚¹60L
+              </button>
+<button class="budget-pill py-2 px-3 text-center bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-xs tracking-wider transition-colors" data-budget="bespoke" type="button">
+                â‚¹60L+ Bespoke
+              </button>
+</div>
+<input id="selectedBudget" name="selectedBudget" type="hidden" value="premium"/>
+</div>
+<!-- Message Textarea -->
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant" for="message">
+              Project Description &amp; Site Location <span class="text-error">*</span>
+</label>
+<textarea class="w-full px-3 py-3 bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-high transition-colors resize-none" id="message" name="message" placeholder="Tell us about your floor area, carpet layout, handover timeline, or design style preferences..." required="" rows="4"></textarea>
+<span class="hidden text-error font-body-sm text-xs mt-0.5" id="messageError">Please provide an outline of your project.</span>
+</div>
+<!-- Submit Button (btn-gold styling in design token palette) -->
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+<p class="font-body-sm text-xs text-on-surface-variant order-2 sm:order-1">
+              Confidentiality guaranteed. Zero spam.
+            </p>
+<button class="btn-gold w-full sm:w-auto px-8 py-3.5 bg-secondary text-on-secondary hover:bg-primary font-button-text text-button-text uppercase tracking-widest transition-all duration-300 shadow-sm flex items-center justify-center gap-2 order-1 sm:order-2 group" id="submitBtn" type="submit">
+<span>Send Enquiry</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Interactive Map Placeholder Section -->
+<section class="w-full px-4 sm:px-6 md:px-12 py-10">
+<div class="max-w-5xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-4 gap-2">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">Spatial Coordinates</span>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Our Atelier Presence</h2>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">info</span>
+<span>Exact coordinates will be configured upon final location confirmation.</span>
+</div>
+</div>
+<!-- Architectural Map Frame -->
+<div class="relative w-full h-80 sm:h-96 bg-surface-container-high overflow-hidden shadow-md">
+<!-- Map Canvas / Placeholder Engine -->
+<div class="w-full h-full bg-cover bg-center" data-alt="Monochrome muted warm architectural aerial map schematic showing city avenues, serene minimalist cartography in cream, sand, and charcoal tones, modern luxury aesthetic." data-location="Indiranagar Bengaluru, Karnataka, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJSa2vMmpIFWE3xVnyajFRR7HPfVszKwFePyFyLeW-BbUTJ2HiOV7JL8QScw3Jt0FyX8_X7B-mTis5hnpUcL3AAbSpKrZWdPjagpqyDVLy-M4muCZ1CbFKOoZXiemL3F14mbCWi73BLXVTEx-2xHkKFeKCE3xAC2vzLRPIwcYjZlqvd5LK_SwC1VFFx-LEeTajZgmJCSZKS4-DoOwygTV8sbWV02Hdekk2fNct-zo7WcUpYJg8WD_e')"></div>
+<!-- Architectural Grid Overlay -->
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<!-- Studio Pin Indicator Overlay Card -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-auto">
+<!-- Pulse Ping effect -->
+<div class="relative flex items-center justify-center">
+<span class="animate-ping absolute inline-flex h-10 w-10 rounded-full bg-secondary opacity-40"></span>
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center shadow-lg relative z-10">
+<span class="material-symbols-outlined text-[24px]">apartment</span>
+</div>
+</div>
+<!-- Label Pill -->
+<div class="mt-2 bg-surface-container-lowest px-4 py-2 shadow-lg text-center">
+<p class="font-headline-sm text-xs text-primary font-bold tracking-wider uppercase">IRA Experience Studio</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant leading-none mt-0.5">Indiranagar â€¢ Bengaluru Flagship</p>
+</div>
+</div>
+<!-- Secondary Pin Indicator (Hyderabad Satellite) -->
+<div class="absolute bottom-6 right-6 hidden sm:flex items-center gap-3 bg-surface-container-lowest/95 backdrop-blur-md p-3 shadow-md">
+<div class="w-8 h-8 bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">domain</span>
+</div>
+<div>
+<p class="font-label-caps text-[10px] text-secondary uppercase tracking-widest font-bold">Satellite Studio</p>
+<p class="font-body-sm text-xs text-primary font-medium">Jubilee Hills, Hyderabad</p>
+</div>
+</div>
+<!-- Latitude / Longitude Micro Badge -->
+<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1.5 shadow-sm">
+<p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest">LAT 12.9716Â° N / LON 77.5946Â° E</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Reassurance Value Props -->
+<section class="w-full px-4 sm:px-6 md:px-12 py-8 bg-surface-container">
+<div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+<div class="w-10 h-10 shrink-0 bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-sm text-primary font-bold">100% Bespoke Curation</h4>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5">Every blueprint tailored around your lifestyle cadence, zero cookie-cutter templates.</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+<div class="w-10 h-10 shrink-0 bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-sm text-primary font-bold">Precision German Hardware</h4>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5">Exclusive use of Blum, Hettich &amp; Hafele joinery mechanisms with 10-year warranties.</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+<div class="w-10 h-10 shrink-0 bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-sm text-primary font-bold">45-Day Handover Promise</h4>
+<p class="font-body-sm text-xs text-on-surface-variant mt-0.5">Transparent milestone tracking via our client digital project management portal.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function initContactInteractions() {
+    // Budget selector pills
+    var pills = document.querySelectorAll('.budget-pill');
+    var budgetInput = document.getElementById('selectedBudget');
+
+    pills.forEach(function(pill) {
+      pill.addEventListener('click', function() {
+        pills.forEach(function(p) {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container-low', 'text-on-surface');
+        });
+        pill.classList.remove('bg-surface-container-low', 'text-on-surface');
+        pill.classList.add('bg-primary', 'text-on-primary');
+        if (budgetInput) {
+          budgetInput.value = pill.getAttribute('data-budget');
+        }
+      });
+    });
+
+    // Form validation and submission
+    var form = document.getElementById('contactForm');
+    var successAlert = document.getElementById('formSuccessAlert');
+
+    if (!form) return;
+
+    var fullName = document.getElementById('fullName');
+    var phoneNumber = document.getElementById('phoneNumber');
+    var emailAddress = document.getElementById('emailAddress');
+    var serviceRequired = document.getElementById('serviceRequired');
+    var message = document.getElementById('message');
+
+    var nameError = document.getElementById('nameError');
+    var phoneError = document.getElementById('phoneError');
+    var emailError = document.getElementById('emailError');
+    var serviceError = document.getElementById('serviceError');
+    var messageError = document.getElementById('messageError');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var isValid = true;
+
+      // Full Name Validation
+      if (!fullName.value.trim()) {
+        nameError.classList.remove('hidden');
+        fullName.classList.add('bg-error-container/20');
+        isValid = false;
+      } else {
+        nameError.classList.add('hidden');
+        fullName.classList.remove('bg-error-container/20');
+      }
+
+      // Phone Validation (simple digit & symbol check)
+      var phonePattern = /^[0-9+\s\-()]{8,18}$/;
+      if (!phoneNumber.value.trim() || !phonePattern.test(phoneNumber.value.trim())) {
+        phoneError.classList.remove('hidden');
+        phoneNumber.classList.add('bg-error-container/20');
+        isValid = false;
+      } else {
+        phoneError.classList.add('hidden');
+        phoneNumber.classList.remove('bg-error-container/20');
+      }
+
+      // Email Validation
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailAddress.value.trim() || !emailPattern.test(emailAddress.value.trim())) {
+        emailError.classList.remove('hidden');
+        emailAddress.classList.add('bg-error-container/20');
+        isValid = false;
+      } else {
+        emailError.classList.add('hidden');
+        emailAddress.classList.remove('bg-error-container/20');
+      }
+
+      // Service Required
+      if (!serviceRequired.value) {
+        serviceError.classList.remove('hidden');
+        serviceRequired.classList.add('bg-error-container/20');
+        isValid = false;
+      } else {
+        serviceError.classList.add('hidden');
+        serviceRequired.classList.remove('bg-error-container/20');
+      }
+
+      // Message Validation
+      if (!message.value.trim() || message.value.trim().length < 5) {
+        messageError.classList.remove('hidden');
+        message.classList.add('bg-error-container/20');
+        isValid = false;
+      } else {
+        messageError.classList.add('hidden');
+        message.classList.remove('bg-error-container/20');
+      }
+
+      if (isValid) {
+        // Show demo success alert
+        if (successAlert) {
+          successAlert.classList.remove('hidden');
+          successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        form.reset();
+      }
+    });
+
+    // Clear inline errors on input
+    [fullName, phoneNumber, emailAddress, serviceRequired, message].forEach(function(field) {
+      if (!field) return;
+      field.addEventListener('input', function() {
+        this.classList.remove('bg-error-container/20');
+        var errSpan = document.getElementById(this.id + 'Error');
+        if (errSpan) errSpan.classList.add('hidden');
+      });
+      field.addEventListener('change', function() {
+        this.classList.remove('bg-error-container/20');
+        var errSpan = document.getElementById(this.id + 'Error');
+        if (errSpan) errSpan.classList.add('hidden');
+      });
+    });
+  })();
+</script><footer class="w-full bg-surface-container-low text-on-surface pt-12 pb-24 md:pb-12 px-6 md:px-12 mt-16"><div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="flex flex-col gap-3"><div class="flex items-center gap-2"><img alt="IRA Interior Studio Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WeHykTn7Gx1sYGz3Bn0yojOR3tm8xFNgksnQWmoo8_h_ZKhHFVk7hwZBiUwcIRwL5FyBeE0mbIci5sD-7_PcWWUVjjGUqMX7ht9y-iLEEdLKyQmjI6-eqXB5Lj7Ec5-ARlBtwPGC8Yl8wgB5bTMp-8mpoJliGOfHFR8g1fcUhD_i_EgdqPtCDjBc4kLoS21cvtI_CQdISOvxB96cA3wyUqTPFKkm34U4P6qRYx8BzEQm_Qv-ESJrKspRg"/><span class="font-headline-sm text-headline-sm text-primary">IRA STUDIO</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Bespoke residential and commercial interior architecture. Balancing warm minimalism with quiet prestige to curate architectural spaces tailored to individual lifestyles.</p></div><div class="flex flex-col gap-3"><h4 class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Quick Links</h4><ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="home" href="index.html">Home</a></li><li><a class="hover:text-primary transition-colors" data-path="about" href="about.html">About</a></li><li><a class="hover:text-primary transition-colors" data-path="services" href="service.html">Services</a></li><li><a class="hover:text-primary transition-colors" data-path="projects" href="project.html">Projects</a></li><li><a class="hover:text-primary transition-colors" data-path="contact" href="contact.html">Contact</a></li></ul></div><div class="flex flex-col gap-3"><h4 class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Services</h4><ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><li>Residential Interiors</li><li>Modular Kitchens</li><li>Wardrobes</li><li>Commercial Interiors</li><li>Custom Interiors</li></ul></div><div class="flex flex-col gap-3"><h4 class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Contact Details</h4><div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-secondary">call</span>+91 XXXXX XXXXX</p><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-secondary">mail</span>info@example.com</p><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-secondary">location_on</span>Bengaluru &amp; Hyderabad, India</p></div><div class="flex items-center gap-3 pt-2 text-primary"><a aria-label="Instagram" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a aria-label="Facebook" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">share</span></a><a aria-label="YouTube" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">smart_display</span></a><a aria-label="Pinterest" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">push_pin</span></a></div></div></div><div class="max-w-7xl mx-auto pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant/80"><p>Â© 2025 IRA INTERIOR STUDIO. All Rights Reserved.</p><div class="flex gap-4"><a class="hover:text-primary transition-colors" href="contact.html">Privacy Policy</a><a class="hover:text-primary transition-colors" href="contact.html">Terms of Service</a></div></div></footer></main><a aria-label="WhatsApp Enquiry" class="fixed bottom-24 md:bottom-8 right-5 z-40 w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.15)] hover:scale-105 active:scale-95 transition-transform duration-200" href="https://wa.me/91XXXXXXXXXX" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[24px]">chat</span></a><nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-2"><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="index.html"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Home</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="about.html"><span class="material-symbols-outlined text-[20px]">architecture</span><span class="font-label-caps text-[10px] tracking-wider uppercase">About</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="service.html"><span class="material-symbols-outlined text-[20px]">design_services</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Services</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="projects" href="project.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Projects</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 transition-colors text-primary font-semibold" data-path="contact" href="contact.html"><span class="material-symbols-outlined text-[20px]">mail</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Contact</span></a></div></nav></body></html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fef9f0;color:#1d1c16;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#fbddc8", "tertiary-fixed-dim": "#c8c6c5", "on-secondary": "#ffffff", "error": "#ba1a1a", "on-error-container": "#93000a", "tertiary-container": "#494949", "on-secondary-fixed-variant": "#5a4317", "on-tertiary-fixed": "#1b1c1c", "primary-container": "#594536", "on-tertiary": "#ffffff", "surface-container-high": "#ece8df", "surface-dim": "#ded9d1", "background": "#fef9f0", "error-container": "#ffdad6", "on-tertiary-container": "#bab8b8", "secondary-container": "#fedba1", "outline-variant": "#d2c4bb", "primary-fixed-dim": "#dec1ad", "on-surface-variant": "#4e453f", "surface": "#fef9f0", "inverse-primary": "#dec1ad", "on-primary-container": "#cfb3a0", "on-error": "#ffffff", "surface-container-highest": "#e7e2d9", "secondary-fixed-dim": "#e3c28a", "outline": "#80756e", "primary": "#412f21", "on-primary-fixed": "#27180c", "secondary-fixed": "#ffdea8", "tertiary-fixed": "#e4e2e1", "on-background": "#1d1c16", "inverse-surface": "#32302b", "secondary": "#735a2c", "surface-container-low": "#f8f3ea", "on-tertiary-fixed-variant": "#474746", "on-secondary-container": "#785f30", "inverse-on-surface": "#f5f0e7", "on-primary-fixed-variant": "#574334", "tertiary": "#333232", "surface-variant": "#e7e2d9", "surface-bright": "#fef9f0", "surface-container": "#f2ede4", "surface-tint": "#705a4a", "on-secondary-fixed": "#271900", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "on-surface": "#1d1c16" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.75rem", "margin-desktop": "5rem", "gutter-desktop": "2.5rem", "space-sm": "0.5rem", "margin": "2rem", "space-xs": "0.25rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "margin-mobile": "1.25rem", "space-xl": "3rem" }, "fontFamily": { "display-hero-mobile": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Playfair Display" ], "button-text": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-sm": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "display-hero": [ "Playfair Display" ], "label-caps": [ "Plus Jakarta Sans" ], "subheading": [ "Playfair Display" ], "headline-lg-mobile": [ "Playfair Display" ] }, "fontSize": { "display-hero-mobile": [ "2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-md": [ "1rem", { "lineHeight": "1.625rem", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-sm": [ "0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "0.015em", "fontWeight": "400" } ], "headline-md": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "button-text": [ "0.875rem", { "lineHeight": "1rem", "letterSpacing": "0.08em", "fontWeight": "500" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.875rem", "letterSpacing": "0.01em", "fontWeight": "300" } ], "headline-sm": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "0em", "fontWeight": "500" } ], "headline-lg": [ "3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "display-hero": [ "4.5rem", { "lineHeight": "5rem", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "label-caps": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.15em", "fontWeight": "600" } ], "subheading": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0.02em", "fontWeight": "400" } ], "headline-lg-mobile": [ "2rem", { "lineHeight": "2.5rem", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen relative"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-4 md:px-8 flex items-center justify-between max-w-7xl mx-auto w-full"><div class="flex items-center gap-3"><img alt="IRA Interior Studio Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WeHykTn7Gx1sYGz3Bn0yojOR3tm8xFNgksnQWmoo8_h_ZKhHFVk7hwZBiUwcIRwL5FyBeE0mbIci5sD-7_PcWWUVjjGUqMX7ht9y-iLEEdLKyQmjI6-eqXB5Lj7Ec5-ARlBtwPGC8Yl8wgB5bTMp-8mpoJliGOfHFR8g1fcUhD_i_EgdqPtCDjBc4kLoS21cvtI_CQdISOvxB96cA3wyUqTPFKkm34U4P6qRYx8BzEQm_Qv-ESJrKspRg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">IRA</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest hidden sm:inline">Interior Studio</span></div></div><div class="hidden md:flex items-center gap-6"><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="index.html">Home</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="about.html">About</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="service.html">Services</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="projects" href="project.html">Projects</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="contact.html">Contact</a></div><div class="flex items-center gap-3"><span class="font-subheading text-subheading text-primary font-medium hidden lg:inline">Home</span><a class="hidden sm:inline-flex items-center justify-center h-10 px-4 bg-primary text-on-primary font-button-text text-button-text uppercase tracking-wider hover:bg-secondary transition-colors duration-200" href="contact.html">Get a Consultation</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 md:pb-12 bg-surface"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-primary text-on-primary">
+<div class="bg-cover bg-center w-full min-h-[580px] md:min-h-[680px] flex items-center relative" data-alt="Editorial interior photography of a luxurious warm minimalist open-concept living space with floor-to-ceiling drapery, natural travertine stone wall, low slung linen sofa, architectural brass accent lamps, warm diffused daylight streaming through fluted glass screens, curated oak wood coffee table, high-end architectural residence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD9etqrMmZZ1Qu5OKfwFbF__sVlvQKcXardAmmsVAfxlfcZDu1LtmLCjuI9MW7XBffsPFBSmduKw5cuNOFIetOuDLQw9VTFa_MC4Lq20vPthX56pjvYfqzc1yTnHH85_21MPgkTSxM5kEIGSrWlT_6yR5rSvPPr3UEvWjXwnDHQmpY4bnBcFPsz22_iK4df-FDHTxsIpCwYarly6IUBaJYfH00FUcsjEJoGBNuDTpYE3nW5OsE5Iukw')">
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/75 to-primary/40 backdrop-blur-[1px]"></div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-5 md:px-12 py-16 flex flex-col items-start gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-container/20 backdrop-blur-md rounded-full text-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed">Bespoke Architectural Interiors</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary max-w-3xl leading-tight">
+          Designing Spaces. <br class="hidden sm:inline"/>Creating Experiences.
+        </h1>
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-primary-container max-w-2xl font-light">
+          Thoughtfully designed interiors that bring together beauty, comfort, functionality, and your unique personality.
+        </p>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-2">
+<a class="inline-flex items-center justify-center h-13 px-8 bg-secondary text-on-secondary font-button-text text-button-text uppercase tracking-wider hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 shadow-md" href="project.html">
+            Explore Our Projects
+          </a>
+<a class="inline-flex items-center justify-center h-13 px-8 bg-surface/10 hover:bg-surface/20 text-on-primary backdrop-blur-md font-button-text text-button-text uppercase tracking-wider transition-all duration-300" href="contact.html">
+            Get a Consultation
+          </a>
+</div>
+<!-- Quick Glance Counters -->
+<div class="grid grid-cols-3 gap-3 md:gap-8 pt-8 w-full max-w-lg">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary-fixed">140+</span>
+<span class="font-label-caps text-[11px] uppercase tracking-wider text-on-primary-container">Spaces Curated</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary-fixed">100%</span>
+<span class="font-label-caps text-[11px] uppercase tracking-wider text-on-primary-container">Bespoke Design</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-secondary-fixed">9+ Yrs</span>
+<span class="font-label-caps text-[11px] uppercase tracking-wider text-on-primary-container">Refined Craft</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Material Moodboard Strip (Delight Moment) -->
+<section class="w-full bg-surface-container-low px-5 md:px-12 py-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">texture</span>
+<div>
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Tactile Materiality</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tap to test our signature curated finishes</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2" id="material-palette">
+<button class="material-btn active flex items-center gap-2 px-3 py-1.5 bg-primary text-on-primary rounded text-xs transition-colors" data-texture="Travertine &amp; Smoked Oak" type="button">
+<span class="w-3 h-3 rounded-full bg-secondary-fixed-dim"></span>
+<span>Travertine</span>
+</button>
+<button class="material-btn flex items-center gap-2 px-3 py-1.5 bg-surface-container text-on-surface rounded text-xs hover:bg-surface-container-high transition-colors" data-texture="Brushed Patina Brass" type="button">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span>Aged Brass</span>
+</button>
+<button class="material-btn flex items-center gap-2 px-3 py-1.5 bg-surface-container text-on-surface rounded text-xs hover:bg-surface-container-high transition-colors" data-texture="Raw BouclÃ© &amp; Milled Walnut" type="button">
+<span class="w-3 h-3 rounded-full bg-primary-fixed-dim"></span>
+<span>BouclÃ© Fabric</span>
+</button>
+<button class="material-btn flex items-center gap-2 px-3 py-1.5 bg-surface-container text-on-surface rounded text-xs hover:bg-surface-container-high transition-colors" data-texture="Calacatta Gold Marble" type="button">
+<span class="w-3 h-3 rounded-full bg-surface-variant"></span>
+<span>Calacatta</span>
+</button>
+</div>
+</div>
+</section>
+<!-- About Preview Section -->
+<section class="w-full px-5 md:px-12 py-16 md:py-24 bg-surface">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
+<div class="md:col-span-6 relative">
+<div class="relative overflow-hidden shadow-xl bg-surface-container-low">
+<img class="w-full h-[400px] md:h-[500px] object-cover hover:scale-102 transition-transform duration-700" data-alt="Modern serene living area interior featuring tactile limewash walls, sculptural ceramic vessels, floor-to-ceiling curtains in natural raw linen, curved armchair in warm ivory bouclÃ©, architectural indoor olive tree in terracotta pot bathed in warm morning light, architectural photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC466owOYKWUCDKHNIr1Q9lPCXZ2dv9dCzj-KQUI8FBFmwepAJax5z3pkmyEfDho-AfcmaxOn6Z2j9uagaWcrCzZIue2diU_pzCBqzoLFzFDWb8fh5EmvGNfpbivqVnxv0XDiovR3w9KUHzZE-rg9mcCPPc8xC8U7oTiUIL3-ncwrUIrSSsnL9l3h54JJAxKT06jNV0CSe7Z2KEjZ7vPbtCdW7TMkFsV3YjpV8V35NQPZZTR3JNGYwI"/>
+</div>
+<div class="absolute -bottom-4 -right-4 bg-primary text-on-primary p-5 shadow-lg max-w-[210px] hidden sm:flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-secondary-fixed">Quiet</span>
+<span class="font-body-sm text-body-sm text-on-primary-container leading-tight">Prestige crafted through warm organic minimalism.</span>
+</div>
+</div>
+<div class="md:col-span-6 flex flex-col gap-5">
+<div class="inline-flex items-center gap-2">
+<span class="w-6 h-[1.5px] bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">About Our Studio</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary leading-tight">
+          Creating Interiors That Feel Like You
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          IRA INTERIOR STUDIO creates thoughtful interior spaces that combine contemporary aesthetics, functionality, and personalized design. Every project is developed around the clientâ€™s lifestyle, requirements, and vision.
+        </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant/90 leading-relaxed">
+          From spatial circulation modeling to acoustic harmony and bespoke joinery, we treat interior architecture not as simple decoration, but as an intimate reflection of how you breathe, host, and decompress.
+        </p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-3 font-button-text text-button-text uppercase tracking-widest text-primary hover:text-secondary group transition-colors" href="about.html">
+<span>Read More About Us</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1.5 transition-transform duration-200">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Preview -->
+<section class="w-full px-5 md:px-12 py-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">Comprehensive Expertise</span>
+<h2 class="font-headline-md text-headline-md text-primary">Our Interior Design Services</h2>
+</div>
+<a class="inline-flex items-center gap-2 font-button-text text-button-text uppercase tracking-wider text-primary hover:text-secondary self-start md:self-auto" href="service.html">
+          View All Services
+          <span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service Card 1 -->
+<div class="group bg-surface shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+<div class="h-48 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Interior architectural rendering of a grand high-ceiling luxury penthouse living room, natural warm walnut paneling, plush sand-toned sofa, ambient cove lighting, marble centerpiece table, refined residential interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZfxlAV2zAWKQ575apyFv6lI4K3T01FFG41Qb8XnqOzp5_vTGXaxkbWb7XNetXZKIo2ChIgoB8335QQtDzEP35lXEP2HQ0n5-ld37_TMnCr0JWyhN4JFK8FYP03E_fR6ro2nM79kqi7NYTit7ckRZdnUtJ-3ETJK9y6Z9TtqwoF49MQ3xsFbobEM3pCPjd52cxztd6OndNByh5UQER1MjBNWRF-OyrK3wfeTiHGXBfPHlMPJDXUwP0"/>
+<div class="absolute top-3 left-3 w-9 h-9 bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[20px]">villa</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+<div class="flex flex-col gap-2">
+<h3 class="font-subheading text-subheading text-primary font-medium">Residential Interiors</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full-home spatial curation from master suites to architectural family salons with timeless warmth.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-caps text-label-caps uppercase tracking-wider text-secondary pt-2 hover:gap-2 transition-all" href="service.html">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-surface shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+<div class="h-48 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist luxury modular kitchen with fluted matte dark brown cabinetry, quartz waterfall edge island, brushed gold fixtures, warm recessed under-cabinet strip lighting, clean organized luxury kitchen layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgnLot-9Lrivb0relb9qLOyQLbNlTBj5ydPVujnA84OlZcH6KaN3tqo7FXtrRokUmzHEWwJgTkBHpaVn7ihQmCe1GAvM60-fE0uvMrqXYoooPhwtfN-i_Ycle7aZfbJCdai9HqDiPjUKJpGK8VF24s1ML9-zahoMChhJEzU2ktDvmtlrGjeb5UfzwG8KOff3BErdRBogClZt6F_bq20HqUZVWTtrcRD54YYQerHoyjchFcOF6r3Q8Y"/>
+<div class="absolute top-3 left-3 w-9 h-9 bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[20px]">kitchen</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+<div class="flex flex-col gap-2">
+<h3 class="font-subheading text-subheading text-primary font-medium">Modular Kitchens</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ergonomic European hardware, seamless integrated cabinetry, and stain-resistant quartz surfaces.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-caps text-label-caps uppercase tracking-wider text-secondary pt-2 hover:gap-2 transition-all" href="service.html">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-surface shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+<div class="h-48 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Walk-in luxury closet dressing room with tinted fluted glass door wardrobes, warm LED lighting inside shelves, plush velvet jewelry drawer trays, rich dark wood veneer backing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDtztDAQBgMbeMWUPHYsZjXNj-CEFaFITnxG0ej-37-JWVEVTxI8_Azu8igvCKwnLLFmgbx9VoS-5FoA1vRmDtuUrJLepOPNFR0qijP6ifU4KsW-3sTo_wSQXHwSP7ntyIia7QF3sFvDuWGJZnE-8sImar-w2ieWw6PFY02meKCSokggX7L_iFvwUphK5WxafkiTfMzh5F5_WS50ai_DHPnCg8Li4bn6eykr29ZZcf9p4qp_tj6JH4"/>
+<div class="absolute top-3 left-3 w-9 h-9 bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[20px]">styler</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+<div class="flex flex-col gap-2">
+<h3 class="font-subheading text-subheading text-primary font-medium">Wardrobes &amp; Storage</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tailored walk-in dressing suites, custom organizers, and ambient acoustic-lined wardrobe joinery.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-caps text-label-caps uppercase tracking-wider text-secondary pt-2 hover:gap-2 transition-all" href="service.html">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="group bg-surface shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+<div class="h-48 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Executive corporate office boardroom and executive lounge with acoustic oak timber slats, biophilic plant partition, warm ambient ceiling diffusers, luxury minimal ergonomic leather chairs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhR2XuP3wy2pQLx4ypleCku1Bf6DCdkKuG4DEn6nt5bLZ9nCes169kxTilxZV5V3htrmJdBKgGollcdN_JhuIYOdHCVIDBuFrPf7JpjhJbnV4cx5X-QCXBb0YiGnw5ldCWyHFdRrvmX4YZWwzqkTFtKBdDgrv2TbbLrHwWalLwoVDxQ7IE6vnRskV_wHC-bvEWNTZdiDCpvp8V4n6R21goOGlHZXZ5hPOaGprM06Eo2YzP53lmewad"/>
+<div class="absolute top-3 left-3 w-9 h-9 bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[20px]">business_center</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+<div class="flex flex-col gap-2">
+<h3 class="font-subheading text-subheading text-primary font-medium">Commercial Interiors</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Purpose-built boutique offices, retail destinations, and creative headquarters with quiet brand presence.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-caps text-label-caps uppercase tracking-wider text-secondary pt-2 hover:gap-2 transition-all" href="service.html">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 5 -->
+<div class="group bg-surface shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+<div class="h-48 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Architectural false ceiling design with organic soft cove lighting, recessed magnetic track lights, smooth gypsum finish, warm indirect illumination glowing softly over warm neutral room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANnFqHKniebqPlB6cmWjtWJyQGWKpCdR-okhf8sYD-5e8yhFyrjmQzO4HmLll5mY8XgsYoOTdFSMryGxIvzlp2vS4Ia1z1AWhIjDl8BWnTGfDkujLpnF6Z5MBMRgqs47GGxFvgYMpvsHyTZrs13Xlc4efZ0epl-9YrO28gnue-rtvTxMHtcNZMBZroC1VXjXpWFW7Rn7x8-qqHGOCIvCDdiVsUSZKwpkJIYMM0qdQEPAt16s646yaM"/>
+<div class="absolute top-3 left-3 w-9 h-9 bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[20px]">light</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+<div class="flex flex-col gap-2">
+<h3 class="font-subheading text-subheading text-primary font-medium">False Ceiling &amp; Lighting</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Circadian lighting scenarios, concealed architectural coves, and acoustic geometric ceiling profiles.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-caps text-label-caps uppercase tracking-wider text-secondary pt-2 hover:gap-2 transition-all" href="service.html">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 6 -->
+<div class="group bg-surface shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+<div class="h-48 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Artisanal bespoke furniture workshop setup showcasing hand-turned walnut dining table, hand-stitched leather dining chairs, tactile ceramic table decor in warm cream daylight studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdKGEPNXJ1s7d_gSdmNmsihcXkld-lxDUqLheNVne3aF27iBiN8bzuulX-dNRNbpaNLlvYc9LMQNnwIUpqNyQu7K6I4RByFvPFXdWKzQxF8waGdg8FRF1CcYNN1GZdjONp31lt07IJ8wVZupXTdLdrM2cVUDopng2-t-1Jck8FtDFyaD9BzQgg9v0U2pSAKmxCUMBz5TzRkT3pfeZ2W5TQAjKgIHMNvT93drgE-ZGb-5DargGswncJ"/>
+<div class="absolute top-3 left-3 w-9 h-9 bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[20px]">chair</span>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-3 flex-1 justify-between">
+<div class="flex flex-col gap-2">
+<h3 class="font-subheading text-subheading text-primary font-medium">Custom Furniture &amp; DÃ©cor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">One-of-a-kind statement pieces, commissioned artworks, and tactile hand-woven textiles curated for harmony.</p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-caps text-label-caps uppercase tracking-wider text-secondary pt-2 hover:gap-2 transition-all" href="service.html">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="w-full px-5 md:px-12 py-16 md:py-24 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-3">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">The IRA Distinction</span>
+<h2 class="font-headline-md text-headline-md text-primary">Why Discerning Clients Choose Us</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Every design decision is rooted in architectural discipline, timeless materiality, and seamless execution.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Feature 1 -->
+<div class="p-6 bg-surface-container-low flex flex-col gap-4 shadow-sm hover:shadow transition-shadow">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+</div>
+<h3 class="font-subheading text-subheading text-primary font-medium">Personalized Designs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">No cookie-cutter templates. We craft individual spatial narratives reflecting your personal routines, taste, and heritage.</p>
+</div>
+<!-- Feature 2 -->
+<div class="p-6 bg-surface-container-low flex flex-col gap-4 shadow-sm hover:shadow transition-shadow">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">palette</span>
+</div>
+<h3 class="font-subheading text-subheading text-primary font-medium">Creative Concepts</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Blending avant-garde architectural shapes with organic warmth, resulting in spaces that stay fresh for decades.</p>
+</div>
+<!-- Feature 3 -->
+<div class="p-6 bg-surface-container-low flex flex-col gap-4 shadow-sm hover:shadow transition-shadow">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">diamond</span>
+</div>
+<h3 class="font-subheading text-subheading text-primary font-medium">Quality Materials</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Sourced directly from authentic quarries, certified timber mills, and master metal artisans with rigorous quality checks.</p>
+</div>
+<!-- Feature 4 -->
+<div class="p-6 bg-surface-container-low flex flex-col gap-4 shadow-sm hover:shadow transition-shadow">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">crop_free</span>
+</div>
+<h3 class="font-subheading text-subheading text-primary font-medium">Attention to Detail</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Mitered stone transitions, flush architectural baseboards, and concealed hinges that make luxury feel natural.</p>
+</div>
+<!-- Feature 5 -->
+<div class="p-6 bg-surface-container-low flex flex-col gap-4 shadow-sm hover:shadow transition-shadow">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">architecture</span>
+</div>
+<h3 class="font-subheading text-subheading text-primary font-medium">Functional Planning</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Micro-planned flow, ergonomic spatial ratios, and intelligent concealed storage ensuring beauty never hinders daily life.</p>
+</div>
+<!-- Feature 6 -->
+<div class="p-6 bg-surface-container-low flex flex-col gap-4 shadow-sm hover:shadow transition-shadow">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">handshake</span>
+</div>
+<h3 class="font-subheading text-subheading text-primary font-medium">Client-Focused Approach</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Transparent project milestones, real-time photographic updates, and strict budget adherence with zero surprises.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="w-full px-5 md:px-12 py-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">Portfolio Highlights</span>
+<h2 class="font-headline-md text-headline-md text-primary">Featured Projects</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Selected residential &amp; boutique works</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Project 1 -->
+<div class="group bg-surface flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="h-64 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern Urban Residence penthouse living room with expansive panoramic city glass wall, low profile Italian leather seating, smoked oak custom wall unit, warm bronze lighting fixtures, architectural luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5usXJ4sgqRHsXgGgQBkxlGdF9OadhqhDM0Qq6n6tVFH2PGwgf_4GoHQ2C6MdEGIfRy4qbQW5uKpGANoYmBDH1OUUoDWkSw0ZLp0w0LRrWJ5dDWpkX9wfEr9BHNqFJNDIay_BsXTzDTRTpNNLe6NEoymDu0k5MpOp42VSurkDKu7of_paW1OblUCGeeR2c9rDbwVxiw1kePq7SmjWirBK0XImsuVjQ04BXIlTrr9ZscsdA44k67eqV"/>
+<span class="absolute top-3 left-3 bg-primary text-on-primary px-3 py-1 font-label-caps text-[10px] uppercase tracking-wider">Bengaluru</span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Residential â€¢ 4,200 sq.ft</span>
+<h3 class="font-subheading text-subheading text-primary font-medium">Modern Urban Residence</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Complete structural gut-renovation blending raw concrete texture with warm fluted oak.</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group bg-surface flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="h-64 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Elegant contemporary villa interior featuring double-height ceiling, sculptural plaster curved staircase, polished cream terrazzo flooring, curated minimalist art canvas, warm natural daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR9c0EZzhu-AwzItyNDcsYi89SIwayrmHWj2DDGdcvNu5DufrauLrtJ-4WXAWv7YKB_5j3wI1HqvVy1WfvxroFtGeu2iGQwX-MTToNG6v8KP0I9FBLo14CQIOHa_QmKKySh_zrJ9bEHtYmMfijXewdvgPRxZ3RavyyIiFpEAIj8l7a-8XHFcC0fGyDzcZ1OgMsQS_vdU2NPpmAh7Je4JkapB2G2MyqfyRSVeCF3E_E2NA5h7gK6Xzg"/>
+<span class="absolute top-3 left-3 bg-primary text-on-primary px-3 py-1 font-label-caps text-[10px] uppercase tracking-wider">Hyderabad</span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Villa â€¢ 6,800 sq.ft</span>
+<h3 class="font-subheading text-subheading text-primary font-medium">Elegant Contemporary Home</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Double-height architectural sanctuary balancing daylight, sound absorption, and brass accents.</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group bg-surface flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="h-64 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist luxury master bedroom with low platform Japanese inspired oak bed frame, beige linen duvet, textured lime plaster accent wall, fluted glass wardrobe doors glowing with warm hidden strip light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbh4o-2-5KJ6pD_SFMOPINfIOO09ZlayoqgcU-eyaSU47GXRWdsDoRTftLor2yjN-Se34cLeIGYFy-NyO5ZhYb_LNedNA6AWFq8us5RK1lv_prHgCpRLrcpSQ7-hX7HaNEO1xeGV0W1_dmFvT8qxT97rsRKa4E2b6i2PfGXIyaap8yREUF-_KFTA4pOZhdbF4kZNN-m2AzQaeck-9fc9m5fO7toi3p-crswIexFrm1I3BagwTfee4l"/>
+<span class="absolute top-3 left-3 bg-primary text-on-primary px-3 py-1 font-label-caps text-[10px] uppercase tracking-wider">Bengaluru</span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Private Suite â€¢ 850 sq.ft</span>
+<h3 class="font-subheading text-subheading text-primary font-medium">Minimalist Bedroom</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Japandi-inspired serene sanctuary centered around acoustic tranquility and tactile linen.</p>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group bg-surface flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="h-64 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Luxury modular kitchen featuring continuous nero marquina marble island, custom fluted walnut cabinetry, concealed appliances, designer copper pendant lights casting soft glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFfKAVAK8pbDTwc_LsSFJgBSTqYakwY-i1FHrkIfhs67NWHceikvxqmmeuDeacOrhrnDdw-ADasgNQ-L16AJpowVm4uxdWPEQDJjSlTwZ4VhQxqn3Y07972crcrYTDpNmoeG-FJpzQI_6qcaCiUsAkZmPWHQCp4MeD8JU7Ot_B9xdrs2DO2pJqlXeQHFiMEIgZACI_ttBstoLvJgzrAAWa5eWx057hfQIIW0XmqzsVoqMrHvHUYsV0"/>
+<span class="absolute top-3 left-3 bg-primary text-on-primary px-3 py-1 font-label-caps text-[10px] uppercase tracking-wider">Hyderabad</span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Culinary Studio â€¢ 620 sq.ft</span>
+<h3 class="font-subheading text-subheading text-primary font-medium">Luxury Modular Kitchen</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">High-performance culinary hub featuring motorized Blum hardware and concealed dry pantry.</p>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="group bg-surface flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="h-64 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern creative tech agency office space with acoustic felt ceiling baffles, polished microcement floors, glass-enclosed conference pod, warm wood standing collaboration desks, natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsMd99cjkKLTuwFQrm-HlQnD5o268sjIlfqJ2FedN12cBqUFJ9NwR-p_XlbTh-Ez7Hv09zu_dSa4Ra86NoOC8wv1K60jefsKftnXCxzEgJx7RJX3XwtmHkAuITyKK7DYZCDcGFKgOAQIjAar_yAtFWdP6prDWbP7pr2j6Qw-OGe5XeLWrf9dvO0F8rVbEMRFSXR1nw4zQJ6YkDbF5At3COOkhP9KIDsF_F7JgEjG6BtBTZWH4Mzobm"/>
+<span class="absolute top-3 left-3 bg-primary text-on-primary px-3 py-1 font-label-caps text-[10px] uppercase tracking-wider">Bengaluru</span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Commercial â€¢ 9,500 sq.ft</span>
+<h3 class="font-subheading text-subheading text-primary font-medium">Modern Office Space</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Biophilic workplace architecture designed for hybrid creative workflows and acoustic calm.</p>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="group bg-surface flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="h-64 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Contemporary open-plan living room with curved sand-colored modular sofa, abstract low pile area rug, floating travertine fireplace shelf, warm sunset light pouring into architectural room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxywVCMtKrAAdX2cAsMBhMXyM2mSXR434FVwn12zFMZgOIb_EF2qfrDCUDIcFM1FSXOndymuPZei_MBEE2HSgg1D3PVJNQ5m39oQdzlfRVnbtz0CsbGBKRSqixBubTBMQB2POzBJyjIXrptqxntj910gGxM2HNgWWMVFB_h8DT8OgbUYTNmj-jEius7g4LyfyyIhbcCD0FK_zUy9Li37TAcdiCIQITtpoOtfFyKr97On7mVTtVPJx3"/>
+<span class="absolute top-3 left-3 bg-primary text-on-primary px-3 py-1 font-label-caps text-[10px] uppercase tracking-wider">Bengaluru</span>
+</div>
+<div class="p-5 flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Residential â€¢ 3,100 sq.ft</span>
+<h3 class="font-subheading text-subheading text-primary font-medium">Contemporary Living Room</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Fluid entertaining zone anchored by custom travertine masonry and sculptured seating.</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center pt-4">
+<a class="inline-flex items-center justify-center h-12 px-8 bg-primary text-on-primary font-button-text text-button-text uppercase tracking-wider hover:bg-secondary transition-colors duration-200" href="project.html">
+          View All Projects
+        </a>
+</div>
+</div>
+</section>
+<!-- Design Process -->
+<section class="w-full px-5 md:px-12 py-16 md:py-24 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-3">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">Structured Curation</span>
+<h2 class="font-headline-md text-headline-md text-primary">Our Architectural Design Process</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">A disciplined 4-phase methodology ensuring spatial precision from first blueprint to final handover.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Step 1 -->
+<div class="p-6 bg-surface-container-low flex flex-col justify-between gap-6 relative shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-secondary-fixed-dim/60 font-serif">01</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">chat_bubble_outline</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-subheading text-subheading text-primary font-semibold">Consultation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">In-depth discovery session assessing spatial volume, lighting orientations, budget, and daily living rituals.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-6 bg-surface-container-low flex flex-col justify-between gap-6 relative shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-secondary-fixed-dim/60 font-serif">02</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">draw</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-subheading text-subheading text-primary font-semibold">Concept &amp; Planning</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2D circulation zoning, photorealistic 3D virtual walkthroughs, and curated physical material moodboards.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-6 bg-surface-container-low flex flex-col justify-between gap-6 relative shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-secondary-fixed-dim/60 font-serif">03</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">handyman</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-subheading text-subheading text-primary font-semibold">Design &amp; Execution</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">On-site precision management, MEP coordination, artisan joinery, and structural finishes under dedicated supervision.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="p-6 bg-surface-container-low flex flex-col justify-between gap-6 relative shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-secondary-fixed-dim/60 font-serif">04</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">key</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-subheading text-subheading text-primary font-semibold">Final Handover</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">White-glove deep cleaning, custom styling, curated lighting balancing, and warranty handover documentation.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Testimonials -->
+<section class="w-full px-5 md:px-12 py-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-3">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">Voices of Trust</span>
+<h2 class="font-headline-md text-headline-md text-primary">What Our Clients Say</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Stories of homes transformed into places of profound comfort and understated elegance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Review 1 -->
+<div class="p-7 bg-surface flex flex-col justify-between gap-6 shadow-sm">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+              â€œIRA turned our empty duplex into an oasis. The way they integrated warm lighting and bespoke walnut partitions made the home feel twice as spacious yet incredibly cozy.â€
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-semibold text-xs">
+              AK
+            </div>
+<div class="flex flex-col">
+<span class="font-button-text text-button-text text-primary">Ananya &amp; Karthik</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant uppercase">Whitefield Penthouse</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-7 bg-surface flex flex-col justify-between gap-6 shadow-sm">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+              â€œProfessionalism of the highest caliber. Our modular kitchen and master suite were executed precisely as shown in the 3D renders, delivered exactly on the agreed date.â€
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-semibold text-xs">
+              VR
+            </div>
+<div class="flex flex-col">
+<span class="font-button-text text-button-text text-primary">Vikram Reddy</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant uppercase">Jubilee Hills Villa</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-7 bg-surface flex flex-col justify-between gap-6 shadow-sm">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed">
+              â€œTheir restraint is their superpower. No loud decorations, just sublime textures, perfectly scaled custom furniture, and lighting that feels like a boutique retreat.â€
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<div class="w-10 h-10 rounded-full bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed font-semibold text-xs">
+              SM
+            </div>
+<div class="flex flex-col">
+<span class="font-button-text text-button-text text-primary">Sneha Mukherjee</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant uppercase">Koramangala Apartment</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call To Action Banner -->
+<section class="w-full px-5 md:px-12 py-16 md:py-20 bg-primary text-on-primary relative overflow-hidden">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-4xl mx-auto text-center flex flex-col items-center gap-6 relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container/20 rounded-full text-secondary-fixed text-xs uppercase tracking-widest font-label-caps">
+        Letâ€™s Collaborate
+      </div>
+<h2 class="font-headline-md text-headline-md text-on-primary">
+        Ready to Transform Your Space?
+      </h2>
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-primary-container max-w-xl font-light">
+        Letâ€™s create a space that reflects your lifestyle, personality, and vision. Reserve a private consultation with our principal design team.
+      </p>
+<div class="pt-3">
+<a class="inline-flex items-center justify-center h-13 px-9 bg-secondary text-on-secondary font-button-text text-button-text uppercase tracking-widest hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 shadow-lg" href="contact.html">
+          Start Your Project
+        </a>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Subtle micro-interaction for tactile moodboard pills
+  document.querySelectorAll('#material-palette .material-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#material-palette .material-btn').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container', 'text-on-surface');
+      });
+      btn.classList.add('bg-primary', 'text-on-primary');
+      btn.classList.remove('bg-surface-container', 'text-on-surface');
+    });
+  });
+</script><footer class="w-full bg-surface-container-low text-on-surface pt-12 pb-24 md:pb-12 px-6 md:px-12 mt-16"><div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="flex flex-col gap-3"><div class="flex items-center gap-2"><img alt="IRA Interior Studio Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WeHykTn7Gx1sYGz3Bn0yojOR3tm8xFNgksnQWmoo8_h_ZKhHFVk7hwZBiUwcIRwL5FyBeE0mbIci5sD-7_PcWWUVjjGUqMX7ht9y-iLEEdLKyQmjI6-eqXB5Lj7Ec5-ARlBtwPGC8Yl8wgB5bTMp-8mpoJliGOfHFR8g1fcUhD_i_EgdqPtCDjBc4kLoS21cvtI_CQdISOvxB96cA3wyUqTPFKkm34U4P6qRYx8BzEQm_Qv-ESJrKspRg"/><span class="font-headline-sm text-headline-sm text-primary">IRA STUDIO</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Bespoke residential and commercial interior architecture. Balancing warm minimalism with quiet prestige to curate architectural spaces tailored to individual lifestyles.</p></div><div class="flex flex-col gap-3"><h4 class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Quick Links</h4><ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="home" href="index.html">Home</a></li><li><a class="hover:text-primary transition-colors" data-path="about" href="about.html">About</a></li><li><a class="hover:text-primary transition-colors" data-path="services" href="service.html">Services</a></li><li><a class="hover:text-primary transition-colors" data-path="projects" href="project.html">Projects</a></li><li><a class="hover:text-primary transition-colors" data-path="contact" href="contact.html">Contact</a></li></ul></div><div class="flex flex-col gap-3"><h4 class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Services</h4><ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><li>Residential Interiors</li><li>Modular Kitchens</li><li>Wardrobes</li><li>Commercial Interiors</li><li>Custom Interiors</li></ul></div><div class="flex flex-col gap-3"><h4 class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Contact Details</h4><div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant"><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-secondary">call</span>+91 XXXXX XXXXX</p><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-secondary">mail</span>info@example.com</p><p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-secondary">location_on</span>Bengaluru &amp; Hyderabad, India</p></div><div class="flex items-center gap-3 pt-2 text-primary"><a aria-label="Instagram" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a aria-label="Facebook" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">share</span></a><a aria-label="YouTube" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">smart_display</span></a><a aria-label="Pinterest" class="w-8 h-8 flex items-center justify-center bg-surface-container hover:bg-primary hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">push_pin</span></a></div></div></div><div class="max-w-7xl mx-auto pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant/80"><p>Â© 2025 IRA INTERIOR STUDIO. All Rights Reserved.</p><div class="flex gap-4"><a class="hover:text-primary transition-colors" href="contact.html">Privacy Policy</a><a class="hover:text-primary transition-colors" href="contact.html">Terms of Service</a></div></div></footer></main><a aria-label="WhatsApp Enquiry" class="fixed bottom-24 md:bottom-8 right-5 z-40 w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.15)] hover:scale-105 active:scale-95 transition-transform duration-200" href="https://wa.me/91XXXXXXXXXX" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[24px]">chat</span></a><nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-2"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 transition-colors text-primary font-semibold" data-path="home" href="index.html"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Home</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="about.html"><span class="material-symbols-outlined text-[20px]">architecture</span><span class="font-label-caps text-[10px] tracking-wider uppercase">About</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="service.html"><span class="material-symbols-outlined text-[20px]">design_services</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Services</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="projects" href="project.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Projects</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[48px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="contact.html"><span class="material-symbols-outlined text-[20px]">mail</span><span class="font-label-caps text-[10px] tracking-wider uppercase">Contact</span></a></div></nav></body></html>
